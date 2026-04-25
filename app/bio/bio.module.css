@@ -97,17 +97,16 @@
   width: 100vw;
   flex-shrink: 0;
   margin: clamp(20px, 4vw, 36px) 0;
-  overflow: visible;
-  z-index: 2;
+  overflow: hidden;
 }
-.single { height: clamp(70px, 12vw, 96px); }
-.double { height: clamp(140px, 22vw, 170px); }
+.single { height: clamp(62px, 11vw, 80px); }
+.double { height: clamp(138px, 23vw, 172px); }
 
 .bandStrip {
   position: absolute;
   left: 0;
   right: 0;
-  height: clamp(55px, 10vw, 68px);
+  height: clamp(56px, 10vw, 72px);
   background: #d81c5b;
   display: flex;
   align-items: center;
@@ -115,17 +114,14 @@
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.40);
 }
 
-/*
-  Both strips at the same -9deg angle → parallel.
-  stripB top = stripA top + strip height + ~8px gap.
-*/
+/* Same angle on both strips → parallel. overflow: hidden clips the rotation. */
 .stripA {
-  top: clamp(6px, 1.5vw, 10px);
+  top: clamp(2px, 0.5vw, 4px);
   transform: rotate(-9deg);
   transform-origin: center center;
 }
 .stripB {
-  top: clamp(70px, 12.5vw, 88px);
+  top: clamp(74px, 13vw, 94px);
   transform: rotate(-9deg);
   transform-origin: center center;
 }
