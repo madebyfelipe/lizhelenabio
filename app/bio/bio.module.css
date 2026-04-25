@@ -1,0 +1,315 @@
+/* ── Page wrapper ────────────────────────────────── */
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(160deg, #1a1215 0%, #2a1020 45%, #d81c5b 100%);
+  padding: clamp(32px, 6vw, 64px) clamp(16px, 4vw, 40px) clamp(60px, 10vw, 100px);
+  overflow-x: hidden;
+}
+
+/* ── Card ────────────────────────────────────────── */
+.card {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Header ──────────────────────────────────────── */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, 3vw, 20px);
+  margin-bottom: clamp(28px, 5vw, 40px);
+  text-align: center;
+}
+
+/* ── Photo ───────────────────────────────────────── */
+.photoWrap { position: relative; flex-shrink: 0; }
+.photo {
+  width: clamp(90px, 22vw, 120px);
+  height: clamp(90px, 22vw, 120px);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 2px solid rgba(255, 181, 199, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.photoBadge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  background: #d81c5b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Name & handle ───────────────────────────────── */
+.name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 800;
+  font-size: clamp(26px, 7vw, 36px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.handle {
+  font-family: var(--font-body);
+  font-size: clamp(12px, 3vw, 13px);
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.02em;
+}
+.handleEm {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: #ffb5c7;
+}
+.profession {
+  font-family: var(--font-body);
+  font-size: clamp(10px, 2.5vw, 11px);
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ── Band Divider ────────────────────────────────── */
+/*
+  KEY FIX: both strip-a and strip-b share the same rotation angle (-9deg)
+  so they appear as parallel bands instead of crossing each other.
+  Only the vertical `top` offset differs.
+*/
+.bandDivider {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  flex-shrink: 0;
+  margin: clamp(20px, 4vw, 36px) 0;
+  overflow: visible;
+  z-index: 2;
+}
+.single { height: clamp(70px, 12vw, 100px); }
+.double { height: clamp(160px, 28vw, 200px); }
+
+.bandStrip {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: clamp(55px, 10vw, 72px);
+  background: #d81c5b;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.40);
+}
+
+/* Both strips rotate at the same angle → parallel */
+.stripA {
+  top: clamp(6px, 1.5vw, 12px);
+  transform: rotate(-9deg);
+  transform-origin: center center;
+}
+.stripB {
+  top: clamp(88px, 16vw, 118px);
+  transform: rotate(-9deg);
+  transform-origin: center center;
+}
+
+.bandText {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 800;
+  font-size: clamp(16px, 4vw, 22px);
+  color: #fff;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  display: inline-block;
+  will-change: transform;
+}
+.forward  { animation: marquee-fwd 24s linear infinite; }
+.backward { animation: marquee-rev 30s linear infinite; }
+
+/* ── Social links ────────────────────────────────── */
+.socialLinks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: clamp(14px, 3vw, 18px) clamp(18px, 4vw, 24px);
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.socialLink:hover,
+.socialLink:focus-visible {
+  transform: translateX(5px);
+  outline: none;
+}
+.socialLink:active { opacity: 0.75; }
+.socialIcon {
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.socialInfo { flex: 1; min-width: 0; }
+.socialLabel {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(14px, 3.5vw, 16px);
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.socialHandle {
+  font-family: var(--font-body);
+  font-size: clamp(11px, 2.5vw, 12px);
+  opacity: 0.6;
+}
+.socialArrow { opacity: 0.45; flex-shrink: 0; }
+
+/* ── Partnership label ───────────────────────────── */
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: clamp(18px, 4vw, 26px);
+  margin-top: 4px;
+}
+.sectionLabel span {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffb5c7;
+}
+
+/* ── Contact form ────────────────────────────────── */
+.formWrap { width: 100%; }
+.form { display: flex; flex-direction: column; gap: clamp(10px, 2.5vw, 14px); }
+
+.formField {
+  width: 100%;
+  padding: clamp(12px, 3vw, 15px) clamp(14px, 3.5vw, 18px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: clamp(14px, 3.5vw, 15px);
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.15s, background 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+  resize: vertical;
+}
+.formField::placeholder { color: rgba(255, 255, 255, 0.45); }
+.formField:focus {
+  border-color: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.formError {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: #ffb5c7;
+  letter-spacing: 0.02em;
+}
+
+.btnSubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: clamp(14px, 3.5vw, 17px) 24px;
+  background: #fff;
+  color: #332c2f;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(12px, 3vw, 13px);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.18s, transform 0.18s;
+  margin-top: 4px;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+.btnSubmit:hover  { opacity: 0.88; transform: translateY(-1px); }
+.btnSubmit:active { opacity: 0.75; transform: translateY(0); }
+
+/* ── Success state ───────────────────────────────── */
+.successBox {
+  text-align: center;
+  padding: clamp(28px, 6vw, 44px) clamp(20px, 5vw, 32px);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.successTitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 800;
+  font-size: clamp(22px, 6vw, 28px);
+  color: #fff;
+  margin: 16px 0 10px;
+}
+.successBody {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+.btnReset {
+  margin-top: 24px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  padding: 9px 22px;
+  cursor: pointer;
+  transition: border-color 0.18s;
+}
+.btnReset:hover { border-color: #fff; }
+
+/* ── Footer ──────────────────────────────────────── */
+.footer {
+  margin-top: clamp(40px, 8vw, 60px);
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ── Tall screens: center vertically ─────────────── */
+@media (min-height: 900px) and (min-width: 600px) {
+  .page { align-items: center; }
+}

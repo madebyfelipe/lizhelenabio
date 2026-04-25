@@ -3,7 +3,9 @@
     "allow": [
       "WebFetch(domain:api.anthropic.com)",
       "Bash(cp /tmp/link-na-bio/project/assets/* /d/lizhelenabio/assets/)",
-      "Bash(cp /tmp/link-na-bio/project/uploads/* /d/lizhelenabio/assets/)"
+      "Bash(cp /tmp/link-na-bio/project/uploads/* /d/lizhelenabio/assets/)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
     ]
   }
 }
