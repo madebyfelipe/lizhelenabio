@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liz Helena — Link na Bio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700;1,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ── CSS Variables ───────────────────────────────── */
+    :root {
+      --crimson:      #d81c5b;
+      --crimson-dark: #b01549;
+      --dark:         #332c2f;
+      --blush:        #ffb5c7;
+      --white:        #ffffff;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', Helvetica, Arial, sans-serif;
+
+      /* Gradient background */
+      --bg-gradient: linear-gradient(160deg, #1a1215 0%, #2a1020 45%, #d81c5b 100%);
+
+      --card-max: 440px;
+      --page-pad: clamp(16px, 4vw, 40px);
+    }
+
+    /* ── Base ────────────────────────────────────────── */
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-gradient);
+      min-height: 100vh;
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ── Page wrapper ────────────────────────────────── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: clamp(32px, 6vw, 64px) var(--page-pad) clamp(60px, 10vw, 100px);
+    }
+
+    /* ── Card ────────────────────────────────────────── */
+    .card {
+      width: 100%;
+      max-width: var(--card-max);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Header ──────────────────────────────────────── */
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(12px, 3vw, 20px);
+      margin-bottom: clamp(28px, 5vw, 40px);
+      text-align: center;
+    }
+
+    /* ── Photo placeholder ───────────────────────────── */
+    .photo-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .photo {
+      width: clamp(90px, 22vw, 120px);
+      height: clamp(90px, 22vw, 120px);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 2px solid rgba(255, 181, 199, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .photo-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: 24px;
+      height: 24px;
+      background: var(--crimson);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Name & handle ───────────────────────────────── */
+    .name {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 800;
+      font-size: clamp(26px, 7vw, 36px);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .handle {
+      font-family: var(--font-body);
+      font-size: clamp(12px, 3vw, 13px);
+      color: rgba(255, 255, 255, 0.65);
+      letter-spacing: 0.02em;
+    }
+    .handle em {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--blush);
+    }
+    .profession {
+      font-family: var(--font-body);
+      font-size: clamp(10px, 2.5vw, 11px);
+      color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    /* ── Band Divider ────────────────────────────────── */
+    .band-divider {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vw;
+      flex-shrink: 0;
+      margin: clamp(20px, 4vw, 36px) 0;
+      overflow: visible;
+      z-index: 2;
+    }
+    .band-divider.single { height: clamp(70px, 12vw, 100px); }
+    .band-divider.double { height: clamp(110px, 20vw, 150px); }
+
+    .band-strip {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: clamp(55px, 10vw, 72px);
+      background: var(--crimson);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.40);
+    }
+    .band-strip.strip-a {
+      top: clamp(8px, 2vw, 14px);
+      transform: rotate(-9deg);
+      transform-origin: center center;
+    }
+    .band-strip.strip-b {
+      top: clamp(42px, 8vw, 56px);
+      transform: rotate(-13deg);
+      transform-origin: center center;
+    }
+
+    .band-text {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 800;
+      font-size: clamp(16px, 4vw, 22px);
+      color: var(--white);
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+      display: inline-block;
+      will-change: transform;
+    }
+    .band-text.forward  { animation: marquee-fwd 24s linear infinite; }
+    .band-text.backward { animation: marquee-rev 30s linear infinite; }
+
+    @keyframes marquee-fwd {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @keyframes marquee-rev {
+      from { transform: translateX(-50%); }
+      to   { transform: translateX(0); }
+    }
+
+    /* ── Social links ────────────────────────────────── */
+    .social-links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: clamp(14px, 3vw, 18px) clamp(18px, 4vw, 24px);
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      transition: transform 0.18s ease, opacity 0.18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .social-link:hover,
+    .social-link:focus-visible {
+      transform: translateX(5px);
+      outline: none;
+    }
+    .social-link:active { opacity: 0.75; }
+    .social-icon {
+      opacity: 0.85;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .social-info { flex: 1; min-width: 0; }
+    .social-label {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: clamp(14px, 3.5vw, 16px);
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .social-handle {
+      font-family: var(--font-body);
+      font-size: clamp(11px, 2.5vw, 12px);
+      opacity: 0.6;
+    }
+    .social-arrow { opacity: 0.45; flex-shrink: 0; }
+
+    /* ── Partnership label ───────────────────────────── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: clamp(18px, 4vw, 26px);
+      margin-top: 4px;
+    }
+    .section-label span {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blush);
+    }
+
+    /* ── Contact form ────────────────────────────────── */
+    .form-wrap { width: 100%; }
+
+    .form { display: flex; flex-direction: column; gap: clamp(10px, 2.5vw, 14px); }
+
+    .form-field {
+      width: 100%;
+      padding: clamp(12px, 3vw, 15px) clamp(14px, 3.5vw, 18px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: clamp(14px, 3.5vw, 15px);
+      outline: none;
+      border-radius: 0;
+      transition: border-color 0.15s, background 0.15s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-field::placeholder { color: rgba(255, 255, 255, 0.45); }
+    .form-field:focus {
+      border-color: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.14);
+    }
+    textarea.form-field {
+      resize: vertical;
+      min-height: 110px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .form-error {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--blush);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: clamp(14px, 3.5vw, 17px) 24px;
+      background: var(--white);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: clamp(12px, 3vw, 13px);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.18s, transform 0.18s;
+      margin-top: 4px;
+      width: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn-submit:hover  { opacity: 0.88; transform: translateY(-1px); }
+    .btn-submit:active { opacity: 0.75; transform: translateY(0); }
+
+    /* ── Success state ───────────────────────────────── */
+    .success-box {
+      text-align: center;
+      padding: clamp(28px, 6vw, 44px) clamp(20px, 5vw, 32px);
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .success-title {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 800;
+      font-size: clamp(22px, 6vw, 28px);
+      color: var(--white);
+      margin: 16px 0 10px;
+    }
+    .success-body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: clamp(13px, 3.5vw, 15px);
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+    .btn-reset {
+      margin-top: 24px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: var(--white);
+      padding: 9px 22px;
+      cursor: pointer;
+      transition: border-color 0.18s;
+    }
+    .btn-reset:hover { border-color: var(--white); }
+
+    /* ── Footer ──────────────────────────────────────── */
+    .footer {
+      margin-top: clamp(40px, 8vw, 60px);
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* ── Reduced motion ──────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .band-text { animation: none; }
+      .social-link:hover { transform: none; }
+    }
+
+    /* ── Tall screens: center vertically ─────────────── */
+    @media (min-height: 900px) and (min-width: 600px) {
+      .page { align-items: center; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="card">
+
+    <!-- ── Header ── -->
+    <header class="header">
+      <div class="photo-wrap">
+        <div class="photo" id="photo-el">
+          <!-- Placeholder silhouette -->
+          <svg width="62" height="62" viewBox="0 0 62 62" fill="none" aria-hidden="true">
+            <circle cx="31" cy="23" r="14" fill="rgba(255,255,255,0.22)"/>
+            <ellipse cx="31" cy="54" rx="23" ry="15" fill="rgba(255,255,255,0.16)"/>
+          </svg>
+        </div>
+        <div class="photo-badge" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff">
+            <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <h1 class="name">Liz Helena</h1>
+        <p class="handle">
+          @LizHelena<em>.psi</em>
+        </p>
+        <p class="profession">Psicologia · Análise do Comportamento</p>
+      </div>
+    </header>
+
+    <!-- ── Band Divider 1 (after header) ── -->
+    <div class="band-divider single" aria-hidden="true">
+      <div class="band-strip strip-a">
+        <span class="band-text forward" id="band-text-1"></span>
+      </div>
+    </div>
+
+    <!-- ── Social Links ── -->
+    <nav class="social-links" aria-label="Redes sociais">
+      <a class="social-link" href="https://instagram.com/lizhelenapsi" target="_blank" rel="noopener">
+        <span class="social-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <div class="social-info">
+          <div class="social-label">Instagram</div>
+          <div class="social-handle">@LizHelena.psi</div>
+        </div>
+        <span class="social-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="social-link" href="https://tiktok.com/@lizhelenapsi" target="_blank" rel="noopener">
+        <span class="social-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.66a8.2 8.2 0 004.79 1.52V6.73a4.85 4.85 0 01-1.02-.04z"/>
+          </svg>
+        </span>
+        <div class="social-info">
+          <div class="social-label">TikTok</div>
+          <div class="social-handle">@LizHelena.psi</div>
+        </div>
+        <span class="social-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="social-link" href="https://linkedin.com/in/lizhelenapsi" target="_blank" rel="noopener">
+        <span class="social-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </span>
+        <div class="social-info">
+          <div class="social-label">LinkedIn</div>
+          <div class="social-handle">Liz Helena</div>
+        </div>
+        <span class="social-arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </span>
+      </a>
+    </nav>
+
+    <!-- ── Band Divider 2 — double, before form ── -->
+    <div class="band-divider double" aria-hidden="true">
+      <div class="band-strip strip-a">
+        <span class="band-text forward" id="band-text-2a"></span>
+      </div>
+      <div class="band-strip strip-b">
+        <span class="band-text backward" id="band-text-2b"></span>
+      </div>
+    </div>
+
+    <!-- ── Parcerias Label ── -->
+    <div class="section-label">
+      <svg width="9" height="9" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
+        <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+      </svg>
+      <span>parcerias</span>
+      <svg width="9" height="9" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
+        <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+      </svg>
+    </div>
+
+    <!-- ── Contact Form ── -->
+    <div class="form-wrap">
+      <!-- Success state (hidden by default) -->
+      <div class="success-box" id="success-box" style="display:none;" role="status" aria-live="polite">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
+          <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+        </svg>
+        <p class="success-title">mensagem enviada!</p>
+        <p class="success-body">Obrigada pelo interesse.<br>Entrarei em contato em breve.</p>
+        <button class="btn-reset" id="btn-reset" type="button">nova mensagem</button>
+      </div>
+
+      <!-- Form -->
+      <form class="form" id="contact-form" novalidate>
+        <input
+          class="form-field"
+          id="field-name"
+          type="text"
+          name="name"
+          placeholder="seu nome"
+          autocomplete="name"
+          aria-label="Seu nome"
+        />
+        <input
+          class="form-field"
+          id="field-email"
+          type="email"
+          name="email"
+          placeholder="seu e-mail"
+          autocomplete="email"
+          aria-label="Seu e-mail"
+          inputmode="email"
+        />
+        <textarea
+          class="form-field"
+          id="field-message"
+          name="message"
+          placeholder="conte um pouco sobre a parceria que você tem em mente..."
+          rows="4"
+          aria-label="Mensagem"
+        ></textarea>
+        <p class="form-error" id="form-error" role="alert" aria-live="assertive" style="display:none;"></p>
+        <button class="btn-submit" type="submit">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+          enviar proposta
+        </button>
+      </form>
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+      <svg width="8" height="8" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
+        <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+      </svg>
+      <span>Liz Helena · 2026</span>
+      <svg width="8" height="8" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
+        <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z"/>
+      </svg>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  /* ── Band marquee text fill ──────────────────────── */
+  (function () {
+    const PHRASE = 'Prazer, eu sou a Liz   ✦   ';
+    const REPEAT = 22;
+    const text = Array(REPEAT).fill(PHRASE).join('');
+    ['band-text-1', 'band-text-2a', 'band-text-2b'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text;
+    });
+  })();
+
+  /* ── Contact form ────────────────────────────────── */
+  (function () {
+    const form      = document.getElementById('contact-form');
+    const errorEl   = document.getElementById('form-error');
+    const successEl = document.getElementById('success-box');
+    const resetBtn  = document.getElementById('btn-reset');
+
+    function showError(msg) {
+      errorEl.textContent = msg;
+      errorEl.style.display = 'block';
+    }
+    function clearError() {
+      errorEl.textContent = '';
+      errorEl.style.display = 'none';
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearError();
+
+      const name    = document.getElementById('field-name').value.trim();
+      const email   = document.getElementById('field-email').value.trim();
+      const message = document.getElementById('field-message').value.trim();
+
+      if (!name || !email || !message) {
+        showError('Preencha todos os campos.');
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('E-mail inválido.');
+        return;
+      }
+
+      form.style.display = 'none';
+      successEl.style.display = 'block';
+    });
+
+    resetBtn.addEventListener('click', function () {
+      document.getElementById('field-name').value    = '';
+      document.getElementById('field-email').value   = '';
+      document.getElementById('field-message').value = '';
+      clearError();
+      successEl.style.display = 'none';
+      form.style.display = 'flex';
+    });
+  })();
+</script>
+</body>
+</html>
