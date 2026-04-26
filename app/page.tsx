@@ -16,10 +16,15 @@ export default function Home() {
             <a href="#areas" className={styles.navLink}>Áreas</a>
             <a href="#conteudo" className={styles.navLink}>Conteúdo</a>
             <a href="#trajetoria" className={styles.navLink}>Trajetória</a>
-            <a href="#contato" className={styles.navCta}>Contato</a>
+            <a href="#contato" className={styles.navLink}>Contato</a>
+            <a href="https://typebot.co/my-typebot-pyy8ao8" target="_blank" rel="noopener noreferrer" className={styles.navCta}>
+              Lista de espera
+            </a>
           </div>
           <div className={styles.navMobileLinks}>
-            <a href="#contato" className={styles.navCta}>Contato</a>
+            <a href="https://typebot.co/my-typebot-pyy8ao8" target="_blank" rel="noopener noreferrer" className={styles.navCta}>
+              Lista de espera
+            </a>
           </div>
         </div>
       </nav>
@@ -41,22 +46,34 @@ export default function Home() {
               adolescentes e jovens adultos.
             </p>
             <div className={styles.heroCtas}>
-              <a
-                href="https://www.instagram.com/lizhelena.psi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.ctaPrimary}
-              >
+              <a href="https://www.instagram.com/lizhelena.psi/" target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
                 Acompanhar o trabalho
               </a>
               <a href="#sobre" className={styles.ctaSecondary}>
                 Conhecer a trajetória
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </a>
             </div>
           </div>
+
           <div className={styles.heroDecoStar} aria-hidden="true">
             <Image src="/estrela-1.png" alt="" fill style={{ objectFit: 'contain' }} />
           </div>
+        </div>
+
+        {/* Second floating star — top left */}
+        <div className={styles.heroSecondStar} aria-hidden="true">
+          <Image src="/estrela-2b.png" alt="" fill style={{ objectFit: 'contain' }} />
+        </div>
+
+        {/* Scroll indicator */}
+        <div className={styles.heroScroll} aria-hidden="true">
+          <span className={styles.heroScrollLine} />
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
         </div>
       </section>
 
@@ -65,7 +82,10 @@ export default function Home() {
         <div className={styles.marqueeTrack}>
           {Array.from({ length: 12 }).map((_, i) => (
             <span key={i} className={styles.marqueeItem}>
-              Psicologia Baseada em Evidências <span className={styles.marqueeDot}>✦</span>
+              Psicologia Baseada em Evidências
+              <svg className={styles.marqueeStar} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
+              </svg>
             </span>
           ))}
         </div>
@@ -79,6 +99,7 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>
               Estudo, pesquisa e divulgação científica em psicologia.
             </h2>
+            <div className={styles.sobreDecor} aria-hidden="true">01</div>
           </div>
           <div>
             <p className={styles.bodyText}>
@@ -102,7 +123,18 @@ export default function Home() {
         <div className={styles.marqueeTrack2}>
           {Array.from({ length: 14 }).map((_, i) => (
             <span key={i} className={styles.marqueeItem2}>
-              TCC · Saúde Mental · Comportamento <span className={styles.marqueeDot2}>✦</span>
+              TCC
+              <svg className={styles.marqueeStar2} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
+              </svg>
+              Saúde Mental
+              <svg className={styles.marqueeStar2} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
+              </svg>
+              Comportamento
+              <svg className={styles.marqueeStar2} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
+              </svg>
             </span>
           ))}
         </div>
@@ -116,34 +148,17 @@ export default function Home() {
             <h2 className={styles.sectionTitleDark}>
               Os temas que orientam minha formação.
             </h2>
+            <span className={styles.areasCount} aria-hidden="true">05</span>
           </div>
           <div className={styles.areasGrid}>
             {[
-              {
-                title: 'Terapia Cognitivo-Comportamental (TCC)',
-                desc: 'Fundamentos teóricos, técnicas e aplicações clínicas.',
-              },
-              {
-                title: 'Psicologia da adolescência e juventude',
-                desc: 'Desenvolvimento emocional, identidade e relações.',
-              },
-              {
-                title: 'Saúde mental da mulher',
-                desc: 'Autoestima, ansiedade, sobrecarga e padrões de pensamento.',
-              },
-              {
-                title: 'Comportamento e cognição',
-                desc: 'Como pensamentos moldam emoções e ações no dia a dia.',
-              },
-              {
-                title: 'Divulgação científica em psicologia',
-                desc: 'Tradução de conteúdo acadêmico para linguagem acessível.',
-              },
+              { title: 'Terapia Cognitivo-Comportamental (TCC)', desc: 'Fundamentos teóricos, técnicas e aplicações clínicas.' },
+              { title: 'Psicologia da adolescência e juventude', desc: 'Desenvolvimento emocional, identidade e relações.' },
+              { title: 'Saúde mental da mulher', desc: 'Autoestima, ansiedade, sobrecarga e padrões de pensamento.' },
+              { title: 'Comportamento e cognição', desc: 'Como pensamentos moldam emoções e ações no dia a dia.' },
+              { title: 'Divulgação científica em psicologia', desc: 'Tradução de conteúdo acadêmico para linguagem acessível.' },
             ].map((area, i) => (
-              <div
-                key={i}
-                className={`${styles.areaCard} ${i === 4 ? styles.areaCardAccent : ''}`}
-              >
+              <div key={i} className={`${styles.areaCard} ${i === 4 ? styles.areaCardAccent : ''}`}>
                 <span className={styles.areaArrow} aria-hidden="true">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M7 17L17 7M7 7h10v10" />
@@ -169,12 +184,10 @@ export default function Home() {
             sociais. O foco é levar conteúdo claro, embasado e útil para quem quer entender
             melhor a própria mente.
           </p>
-          <a
-            href="https://www.instagram.com/lizhelena.psi/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ctaLight}
-          >
+          <a href="https://www.instagram.com/lizhelena.psi/" target="_blank" rel="noopener noreferrer" className={styles.ctaLight}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
             Seguir no Instagram
           </a>
         </div>
@@ -188,6 +201,7 @@ export default function Home() {
             <h2 className={styles.sectionTitleDark}>
               Formação em construção, com método.
             </h2>
+            <div className={styles.sobreDecor} style={{ color: 'rgba(51,44,47,0.06)' }} aria-hidden="true">02</div>
           </div>
           <div>
             <p className={styles.bodyTextDark}>
@@ -209,18 +223,18 @@ export default function Home() {
       {/* ── LISTA DE ESPERA ── */}
       <section className={styles.waitlist}>
         <div className={styles.waitlistInner}>
+          <div className={styles.waitlistIcon} aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
           <h2 className={styles.waitlistTitle}>
             Entre na lista de espera.
           </h2>
           <p className={styles.waitlistDesc}>
             Seja a primeira a saber quando tiver novidade — conteúdo exclusivo, mentorias e muito mais.
           </p>
-          <a
-            href="https://typebot.co/my-typebot-pyy8ao8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ctaDark}
-          >
+          <a href="https://typebot.co/my-typebot-pyy8ao8" target="_blank" rel="noopener noreferrer" className={styles.ctaDark}>
             Quero entrar
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -232,7 +246,12 @@ export default function Home() {
       {/* ── AVISO ÉTICO ── */}
       <section className={styles.aviso}>
         <div className={styles.avisoInner}>
-          <div className={styles.avisoIcon} aria-hidden="true">✦</div>
+          <div className={styles.avisoIcon} aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4M12 16h.01" />
+            </svg>
+          </div>
           <h2 className={styles.avisoTitle}>Sobre atendimento clínico.</h2>
           <p className={styles.avisoText}>
             Liz Helena ainda está em formação e não realiza atendimento psicológico. Este site tem
@@ -254,34 +273,43 @@ export default function Home() {
             </p>
           </div>
           <div className={styles.contatoLinks}>
+
             <a href="mailto:liz@lizhelena.com.br" className={styles.contatoLink}>
-              <span className={styles.contatoLinkLabel}>E-mail</span>
+              <span className={styles.contatoLinkInner}>
+                <svg className={styles.contatoLinkIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span className={styles.contatoLinkLabel}>E-mail</span>
+              </span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a
-              href="https://www.instagram.com/lizhelena.psi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.contatoLink}
-            >
-              <span className={styles.contatoLinkLabel}>Instagram</span>
+
+            <a href="https://www.instagram.com/lizhelena.psi/" target="_blank" rel="noopener noreferrer" className={styles.contatoLink}>
+              <span className={styles.contatoLinkInner}>
+                <svg className={styles.contatoLinkIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span className={styles.contatoLinkLabel}>Instagram</span>
+              </span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a
-              href="https://www.linkedin.com/in/liz-helena-fort-ribeiro-11381922b/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.contatoLink}
-            >
-              <span className={styles.contatoLinkLabel}>LinkedIn</span>
+
+            <a href="https://www.linkedin.com/in/liz-helena-fort-ribeiro-11381922b/" target="_blank" rel="noopener noreferrer" className={styles.contatoLink}>
+              <span className={styles.contatoLinkInner}>
+                <svg className={styles.contatoLinkIcon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                <span className={styles.contatoLinkLabel}>LinkedIn</span>
+              </span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
+
           </div>
         </div>
       </section>
@@ -289,22 +317,9 @@ export default function Home() {
       {/* ── FOOTER ── */}
       <footer className={styles.footer}>
         <div className={styles.footerInner}>
-          <Image
-            src="/logo-black.png"
-            alt="Liz Helena"
-            height={22}
-            width={84}
-            style={{ objectFit: 'contain', opacity: 0.3 }}
-          />
           <p className={styles.footerText}>© 2026 Liz Helena · Psicologia</p>
           <a href="https://madebyfelipe.com.br" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/logo.png"
-              alt="Made by Felipe"
-              height={20}
-              width={78}
-              style={{ objectFit: 'contain', opacity: 0.25 }}
-            />
+            <Image src="/logo.png" alt="Made by Felipe" height={20} width={78} style={{ objectFit: 'contain', opacity: 0.25 }} />
           </a>
         </div>
       </footer>
