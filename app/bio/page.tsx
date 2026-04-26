@@ -12,8 +12,8 @@ export default function BioPage() {
 
       {/* ── Header ── */}
       <header className={styles.header}>
-        <Image className={`${styles.starImg} ${styles.starTl}`} src="/star-white.png" alt="" width={60} height={60} />
-        <Image className={`${styles.starImg} ${styles.starBr}`} src="/star-white-wide.png" alt="" width={46} height={46} />
+        <Image className={`${styles.starImg} ${styles.starTl}`} src="/estrela-1.png" alt="" width={60} height={60} />
+        <Image className={`${styles.starImg} ${styles.starBr}`} src="/estrela-2.png" alt="" width={52} height={52} />
         <div className={styles.headerInner}>
           <div className={styles.headerEyebrow}>
             @LizHelena<em>.psi</em>
@@ -25,10 +25,10 @@ export default function BioPage() {
 
       {/* ── Links Principais ── */}
       <section className={styles.linksSection}>
-        <div className={`${styles.sectionEyebrow} ${styles.eyebrowDark}`}>links principais</div>
-        <a href="#" className={`${styles.linkBtn} ${styles.btnDark}`}>Conteúdos de Psicologia</a>
-        <a href="#" className={`${styles.linkBtn} ${styles.btnOutline}`}>Sobre a Análise do Comportamento</a>
-        <a href="#" className={`${styles.linkBtn} ${styles.btnDark}`}>Caixinhas — me manda sua pergunta</a>
+        <div className={`${styles.sectionEyebrow} ${styles.eyebrowLight}`}>links principais</div>
+        <a href="#" className={`${styles.linkBtn} ${styles.btnLight}`}>Conteúdos de Psicologia</a>
+        <a href="#" className={`${styles.linkBtn} ${styles.btnOutlineDark}`}>Sobre a Análise do Comportamento</a>
+        <a href="#" className={`${styles.linkBtn} ${styles.btnLight}`}>Caixinhas — me manda sua pergunta</a>
       </section>
 
       {/* ── Lista de Espera ── */}
@@ -68,7 +68,7 @@ export default function BioPage() {
 
       {/* ── Redes Sociais ── */}
       <section className={styles.sociaisSection}>
-        <div className={`${styles.sectionEyebrow} ${styles.eyebrowDark}`}>me segue nas redes</div>
+        <div className={`${styles.sectionEyebrow} ${styles.eyebrowLight}`}>me segue nas redes</div>
 
         <a href="https://instagram.com/LizHelena.psi" target="_blank" rel="noopener noreferrer" className={styles.socialBtn}>
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
@@ -94,7 +94,7 @@ export default function BioPage() {
 
       {/* ── Footer ── */}
       <footer className={styles.footer}>
-        <Image src="/logo-black.png" alt="Made by Felipe" height={30} width={120} style={{ objectFit: 'contain' }} />
+        <Image src="/logo-black.png" alt="Made by Felipe" height={28} width={110} style={{ objectFit: 'contain', opacity: 0.3 }} />
       </footer>
 
     </div>

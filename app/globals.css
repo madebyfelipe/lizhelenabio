@@ -10,8 +10,9 @@ html { scroll-behavior: smooth; }
   --blush:        #ffb5c7;
   --white:        #ffffff;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', Helvetica, Arial, sans-serif;
+  --font-display:  'PP Eiko', Georgia, serif;
+  --font-subtitle: 'Neue Haas Display', Helvetica, Arial, sans-serif;
+  --font-body:     'Times New Roman', Times, serif;
 
   --bg-gradient: linear-gradient(160deg, #1a1215 0%, #2a1020 45%, #d81c5b 100%);
   --card-max: 440px;

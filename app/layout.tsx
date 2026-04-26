@@ -1,19 +1,20 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  style: ['italic', 'normal'],
-  weight: ['700', '800'],
+const ppEiko = localFont({
+  src: [
+    { path: './fonts/PPEiko-Heavy.otf', weight: '800', style: 'normal' },
+    { path: './fonts/PPEiko-BlackItalic.otf', weight: '800', style: 'italic' },
+  ],
   variable: '--font-display',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-body',
+const neueHaas = localFont({
+  src: './fonts/NeueHaasDisplayBold.ttf',
+  weight: '700',
+  variable: '--font-subtitle',
   display: 'swap',
 })
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="pt-BR" className={`${ppEiko.variable} ${neueHaas.variable}`}>
       <body>{children}</body>
     </html>
   )
