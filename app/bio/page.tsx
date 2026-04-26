@@ -1,143 +1,102 @@
-import ContactForm from './ContactForm'
+'use client'
+
+import Image from 'next/image'
+import { useState } from 'react'
 import styles from './bio.module.css'
 
-const PHRASE = 'Prazer, eu sou a Liz   ✦   '
-const marqueeText = PHRASE.repeat(22)
-
-export const metadata = {
-  title: 'Liz Helena — Link na Bio',
-  description: 'Psicologia · Análise do Comportamento · @LizHelena.psi',
-}
-
 export default function BioPage() {
+  const [joined, setJoined] = useState(false)
+
   return (
     <div className={styles.page}>
-      <div className={styles.card}>
 
-        {/* ── Header ── */}
-        <header className={styles.header}>
-          <div className={styles.photoWrap}>
-            <div className={styles.photo}>
-              <svg width="62" height="62" viewBox="0 0 62 62" fill="none" aria-hidden="true">
-                <circle cx="31" cy="23" r="14" fill="rgba(255,255,255,0.22)" />
-                <ellipse cx="31" cy="54" rx="23" ry="15" fill="rgba(255,255,255,0.16)" />
-              </svg>
-            </div>
-            <div className={styles.photoBadge} aria-hidden="true">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff">
-                <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
-              </svg>
-            </div>
+      {/* ── Header ── */}
+      <header className={styles.header}>
+        <Image className={`${styles.starImg} ${styles.starTl}`} src="/star-white.png" alt="" width={60} height={60} />
+        <Image className={`${styles.starImg} ${styles.starBr}`} src="/star-white-wide.png" alt="" width={46} height={46} />
+        <div className={styles.headerInner}>
+          <div className={styles.headerEyebrow}>
+            @LizHelena<em>.psi</em>
           </div>
-          <div>
-            <h1 className={styles.name}>Liz Helena</h1>
-            <p className={styles.handle}>
-              @LizHelena<em className={styles.handleEm}>.psi</em>
-            </p>
-            <p className={styles.profession}>Psicologia · Análise do Comportamento</p>
-          </div>
-        </header>
+          <h1 className={styles.headerName}>Liz Helena</h1>
+          <p className={styles.headerSub}>Estudante de Psicologia · Análise do Comportamento</p>
+        </div>
+      </header>
 
-        {/* ── Band Divider 1 — single ── */}
-        <div className={`${styles.bandDivider} ${styles.single}`} aria-hidden="true">
-          <div className={`${styles.bandStrip} ${styles.stripA}`}>
-            <span className={`${styles.bandText} ${styles.forward}`}>{marqueeText}</span>
+      {/* ── Links Principais ── */}
+      <section className={styles.linksSection}>
+        <div className={`${styles.sectionEyebrow} ${styles.eyebrowDark}`}>links principais</div>
+        <a href="#" className={`${styles.linkBtn} ${styles.btnDark}`}>Conteúdos de Psicologia</a>
+        <a href="#" className={`${styles.linkBtn} ${styles.btnOutline}`}>Sobre a Análise do Comportamento</a>
+        <a href="#" className={`${styles.linkBtn} ${styles.btnDark}`}>Caixinhas — me manda sua pergunta</a>
+      </section>
+
+      {/* ── Lista de Espera ── */}
+      <div className={styles.waitlistBand}>
+        <div className={styles.marqueeWrap}>
+          <div className={styles.marqueeTrack}>
+            {Array.from({ length: 8 }).map((_, i) => (
+              <span key={i} className={styles.marqueeItem}>
+                Lista de Espera <span className={styles.marqueeDot}>✦</span>
+              </span>
+            ))}
           </div>
         </div>
-
-        {/* ── Social Links ── */}
-        <nav className={styles.socialLinks} aria-label="Redes sociais">
-          <a className={styles.socialLink} href="https://instagram.com/lizhelenapsi" target="_blank" rel="noopener noreferrer">
-            <span className={styles.socialIcon} aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
-              </svg>
-            </span>
-            <div className={styles.socialInfo}>
-              <div className={styles.socialLabel}>Instagram</div>
-              <div className={styles.socialHandle}>@LizHelena.psi</div>
-            </div>
-            <span className={styles.socialArrow} aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </a>
-
-          <a className={styles.socialLink} href="https://tiktok.com/@lizhelenapsi" target="_blank" rel="noopener noreferrer">
-            <span className={styles.socialIcon} aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.66a8.2 8.2 0 004.79 1.52V6.73a4.85 4.85 0 01-1.02-.04z" />
-              </svg>
-            </span>
-            <div className={styles.socialInfo}>
-              <div className={styles.socialLabel}>TikTok</div>
-              <div className={styles.socialHandle}>@LizHelena.psi</div>
-            </div>
-            <span className={styles.socialArrow} aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </a>
-
-          <a className={styles.socialLink} href="https://linkedin.com/in/lizhelenapsi" target="_blank" rel="noopener noreferrer">
-            <span className={styles.socialIcon} aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </span>
-            <div className={styles.socialInfo}>
-              <div className={styles.socialLabel}>LinkedIn</div>
-              <div className={styles.socialHandle}>Liz Helena</div>
-            </div>
-            <span className={styles.socialArrow} aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </span>
-          </a>
-        </nav>
-
-        {/* ── Band Divider 2 — double ── */}
-        <div className={`${styles.bandDivider} ${styles.double}`} aria-hidden="true">
-          <div className={`${styles.bandStrip} ${styles.stripA}`}>
-            <span className={`${styles.bandText} ${styles.forward}`}>{marqueeText}</span>
+        <div className={styles.waitlistBody}>
+          <div className={styles.waitlistIconWrap}>
+            <svg viewBox="0 0 24 24" width="28" height="28" stroke="white" fill="none" strokeWidth="1.6">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M2 7l10 7 10-7" />
+            </svg>
           </div>
-          <div className={`${styles.bandStrip} ${styles.stripB}`}>
-            <span className={`${styles.bandText} ${styles.backward}`}>{marqueeText}</span>
+          <div className={styles.waitlistContent}>
+            <div className={styles.waitlistTitle}>Entrar na lista de espera</div>
+            <p className={styles.waitlistDesc}>Seja a primeira a saber quando tiver novidade — conteúdo exclusivo, mentorias e muito mais.</p>
+            {!joined ? (
+              <button className={styles.waitlistCta} onClick={() => setJoined(true)}>
+                Quero entrar ✦
+              </button>
+            ) : (
+              <div className={styles.waitlistSuccess}>
+                <span className={styles.starIcon}>✦</span>
+                <p>Arrasou! Você está na lista.<br />Fique de olho no seu e-mail.</p>
+              </div>
+            )}
           </div>
         </div>
-
-        {/* ── Parcerias Label ── */}
-        <div className={styles.sectionLabel}>
-          <svg width="9" height="9" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
-            <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
-          </svg>
-          <span>parcerias</span>
-          <svg width="9" height="9" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
-            <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
-          </svg>
-        </div>
-
-        {/* ── Contact Form ── */}
-        <ContactForm />
-
-        {/* ── Footer ── */}
-        <footer className={styles.footer}>
-          <svg width="8" height="8" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
-            <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
-          </svg>
-          <span>Liz Helena · 2026</span>
-          <svg width="8" height="8" viewBox="0 0 24 24" fill="#ffb5c7" aria-hidden="true">
-            <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" />
-          </svg>
-        </footer>
-
       </div>
+
+      {/* ── Redes Sociais ── */}
+      <section className={styles.sociaisSection}>
+        <div className={`${styles.sectionEyebrow} ${styles.eyebrowDark}`}>me segue nas redes</div>
+
+        <a href="https://instagram.com/LizHelena.psi" target="_blank" rel="noopener noreferrer" className={styles.socialBtn}>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+          Instagram
+        </a>
+
+        <a href="https://tiktok.com/@LizHelena.psi" target="_blank" rel="noopener noreferrer" className={styles.socialBtn}>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.17 8.17 0 004.78 1.53V6.84a4.85 4.85 0 01-1.01-.15z" />
+          </svg>
+          TikTok
+        </a>
+
+        <a href="https://linkedin.com/in/lizhelena" target="_blank" rel="noopener noreferrer" className={styles.socialBtn}>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          LinkedIn
+        </a>
+      </section>
+
+      {/* ── Footer ── */}
+      <footer className={styles.footer}>
+        <Image src="/logo-black.png" alt="Made by Felipe" height={30} width={120} style={{ objectFit: 'contain' }} />
+      </footer>
+
     </div>
   )
 }
