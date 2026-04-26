@@ -82,7 +82,9 @@ export default function BioPage() {
 
       {/* ── Footer ── */}
       <footer className={styles.footer}>
-        <Image src="/logo-black.png" alt="Made by Felipe" height={28} width={110} style={{ objectFit: 'contain', opacity: 0.3 }} />
+        <a href="https://madebyfelipe.com.br" target="_blank" rel="noopener noreferrer">
+          <Image src="/logo-black.png" alt="Made by Felipe" height={28} width={110} style={{ objectFit: 'contain', opacity: 0.3 }} />
+        </a>
       </footer>
 
     </div>

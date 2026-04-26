@@ -19,8 +19,8 @@ const neueHaas = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Liz Helena',
-  description: 'Psicologia · Análise do Comportamento',
+  title: 'Liz Helena — Psicologia e TCC',
+  description: 'Estudante de Psicologia com foco em Terapia Cognitivo-Comportamental. Conteúdo sobre saúde mental, comportamento e autoconhecimento para mulheres, adolescentes e jovens adultos.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
