@@ -26,35 +26,37 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className={styles.hero}>
-        <div className={styles.heroInner}>
-          <p className={styles.heroEyebrow}>Psicologia · TCC · Divulgação Científica</p>
-          <h1 className={styles.heroHeadline}>
-            Psicologia baseada<br />
-            em evidências para<br />
-            quem quer entender<br />
-            o próprio comportamento.
-          </h1>
-          <p className={styles.heroSub}>
-            Liz Helena estuda Psicologia com foco em Terapia Cognitivo-Comportamental e produz
-            conteúdo sobre saúde mental, autoconhecimento e comportamento para mulheres,
-            adolescentes e jovens adultos.
-          </p>
-          <div className={styles.heroCtas}>
-            <a
-              href="https://www.instagram.com/lizhelena.psi/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ctaPrimary}
-            >
-              Acompanhar o trabalho
-            </a>
-            <a href="#sobre" className={styles.ctaSecondary}>
-              Conhecer a trajetória
-            </a>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroInner}>
+            <p className={styles.heroEyebrow}>Psicologia · TCC · Divulgação Científica</p>
+            <h1 className={styles.heroHeadline}>
+              Psicologia baseada<br />
+              em evidências para<br />
+              quem quer entender<br />
+              o próprio comportamento.
+            </h1>
+            <p className={styles.heroSub}>
+              Liz Helena estuda Psicologia com foco em Terapia Cognitivo-Comportamental e produz
+              conteúdo sobre saúde mental, autoconhecimento e comportamento para mulheres,
+              adolescentes e jovens adultos.
+            </p>
+            <div className={styles.heroCtas}>
+              <a
+                href="https://www.instagram.com/lizhelena.psi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ctaPrimary}
+              >
+                Acompanhar o trabalho
+              </a>
+              <a href="#sobre" className={styles.ctaSecondary}>
+                Conhecer a trajetória
+              </a>
+            </div>
           </div>
-        </div>
-        <div className={styles.heroDecoStar} aria-hidden="true">
-          <Image src="/estrela-1.png" alt="" width={80} height={80} />
+          <div className={styles.heroDecoStar} aria-hidden="true">
+            <Image src="/estrela-1.png" alt="" fill style={{ objectFit: 'contain' }} />
+          </div>
         </div>
       </section>
 
@@ -138,8 +140,15 @@ export default function Home() {
                 desc: 'Tradução de conteúdo acadêmico para linguagem acessível.',
               },
             ].map((area, i) => (
-              <div key={i} className={styles.areaCard}>
-                <span className={styles.areaNumber}>0{i + 1}</span>
+              <div
+                key={i}
+                className={`${styles.areaCard} ${i === 4 ? styles.areaCardAccent : ''}`}
+              >
+                <span className={styles.areaArrow} aria-hidden="true">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </span>
                 <h3 className={styles.areaTitle}>{area.title}</h3>
                 <p className={styles.areaDesc}>{area.desc}</p>
               </div>

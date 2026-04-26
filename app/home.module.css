@@ -87,18 +87,31 @@
     linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
   background-size: 28px 28px;
-  display: flex;
-  align-items: flex-end;
   padding-top: 64px;
-  position: relative;
   overflow: hidden;
 }
 
-.heroInner {
+.heroGrid {
   max-width: 1160px;
   margin: 0 auto;
-  padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px) clamp(60px, 8vw, 100px);
-  width: 100%;
+  padding: 0 clamp(20px, 5vw, 60px);
+  min-height: calc(100svh - 64px);
+  display: grid;
+  grid-template-columns: 1fr clamp(280px, 58svh, 600px);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: end;
+}
+
+@media (max-width: 860px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+.heroInner {
+  padding: clamp(48px, 8vw, 100px) 0 clamp(60px, 8vw, 100px);
+  align-self: end;
 }
 
 .heroEyebrow {
@@ -180,16 +193,28 @@
 }
 
 .heroDecoStar {
-  position: absolute;
-  top: clamp(90px, 12vw, 140px);
-  right: clamp(20px, 6vw, 80px);
-  animation: starPulse 3s ease-in-out infinite;
+  align-self: center;
+  width: clamp(280px, 58svh, 600px);
+  height: clamp(280px, 58svh, 600px);
+  position: relative;
+  flex-shrink: 0;
+  animation: starPulse 5s ease-in-out infinite;
   pointer-events: none;
+}
+
+@media (max-width: 860px) {
+  .heroDecoStar {
+    width: clamp(180px, 50vw, 320px);
+    height: clamp(180px, 50vw, 320px);
+    justify-self: end;
+    align-self: end;
+    margin-bottom: -20px;
+  }
 }
 
 @keyframes starPulse {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
-  50%       { transform: scale(0.82) rotate(22deg); opacity: 0.7; }
+  50%       { transform: scale(0.9) rotate(15deg); opacity: 0.85; }
 }
 
 /* ── MARQUEE 1 ────────────────────────────────────── */
@@ -314,7 +339,7 @@
 
 /* ── ÁREAS DE ESTUDO ──────────────────────────────── */
 .areas {
-  background: #f5f0eb;
+  background: #1a1215;
   padding: clamp(60px, 10vw, 120px) 0;
 }
 
@@ -334,7 +359,7 @@
   font-weight: 700;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: #d81c5b;
+  color: #ffb5c7;
   margin-bottom: 16px;
 }
 
@@ -344,52 +369,73 @@
   font-size: clamp(24px, 3.5vw, 40px);
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: #332c2f;
+  color: #ffffff;
   max-width: 600px;
 }
 
 .areasGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: 1px;
-  background: rgba(51, 44, 47, 0.12);
-  border: 1px solid rgba(51, 44, 47, 0.12);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .areasGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 560px) {
+  .areasGrid { grid-template-columns: 1fr; }
 }
 
 .areaCard {
   background: #f5f0eb;
-  padding: clamp(24px, 4vw, 40px);
+  padding: clamp(20px, 3vw, 30px);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: background 0.15s;
+  position: relative;
+  transition: background 0.15s, transform 0.15s;
+  cursor: default;
 }
 
-.areaCard:hover { background: #edeae5; }
+.areaCard:hover { background: #edeae5; transform: translateY(-2px); }
 
-.areaNumber {
-  font-family: var(--font-nhd);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  color: #d81c5b;
+.areaCardAccent {
+  background: #ffb5c7;
+}
+
+.areaCardAccent:hover { background: #ffa8be; }
+
+.areaArrow {
+  position: absolute;
+  top: clamp(14px, 2vw, 18px);
+  right: clamp(14px, 2vw, 18px);
+  color: rgba(51, 44, 47, 0.4);
+  flex-shrink: 0;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.areaCard:hover .areaArrow {
+  color: rgba(51, 44, 47, 0.75);
+  transform: translate(2px, -2px);
 }
 
 .areaTitle {
   font-family: var(--font-nhd);
   font-weight: 700;
-  font-size: clamp(15px, 2vw, 18px);
+  font-size: clamp(14px, 1.8vw, 17px);
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: #332c2f;
+  padding-right: 28px;
 }
 
 .areaDesc {
   font-family: var(--font-nhd);
   font-weight: 300;
-  font-size: clamp(13px, 1.5vw, 14px);
+  font-size: clamp(12px, 1.4vw, 13px);
   line-height: 1.65;
-  color: rgba(51, 44, 47, 0.55);
+  color: rgba(51, 44, 47, 0.6);
 }
 
 /* ── CONTEÚDO E PRODUÇÃO ──────────────────────────── */
