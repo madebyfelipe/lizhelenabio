@@ -10,26 +10,27 @@ export default function BioPage() {
   return (
     <div className={styles.page}>
 
-      {/* ── Header ── */}
-      <header className={styles.header}>
-        <Image className={`${styles.starImg} ${styles.starTl}`} src="/estrela-1.png" alt="" width={60} height={60} />
-        <Image className={`${styles.starImg} ${styles.starBr}`} src="/estrela-2.png" alt="" width={52} height={52} />
-        <div className={styles.headerInner}>
-          <div className={styles.headerEyebrow}>
-            @LizHelena<em>.psi</em>
+      {/* ── Header + Links (crimson block compartilha a grid) ── */}
+      <div className={styles.crimsonBlock}>
+        <header className={styles.header}>
+          <Image className={`${styles.starImg} ${styles.starTl}`} src="/estrela-1.png" alt="" width={60} height={60} />
+          <Image className={`${styles.starImg} ${styles.starBr}`} src="/estrela-2.png" alt="" width={52} height={52} />
+          <div className={styles.headerInner}>
+            <div className={styles.headerEyebrow}>
+              @LizHelena<em>.psi</em>
+            </div>
+            <h1 className={styles.headerName}>Liz Helena</h1>
+            <p className={styles.headerSub}>Estudante de Psicologia · Análise do Comportamento</p>
           </div>
-          <h1 className={styles.headerName}>Liz Helena</h1>
-          <p className={styles.headerSub}>Estudante de Psicologia · Análise do Comportamento</p>
-        </div>
-      </header>
+        </header>
 
-      {/* ── Links Principais ── */}
-      <section className={styles.linksSection}>
-        <div className={`${styles.sectionEyebrow} ${styles.eyebrowLight}`}>links principais</div>
-        <a href="#" className={`${styles.linkBtn} ${styles.btnLight}`}>Conteúdos de Psicologia</a>
-        <a href="#" className={`${styles.linkBtn} ${styles.btnOutlineDark}`}>Sobre a Análise do Comportamento</a>
-        <a href="#" className={`${styles.linkBtn} ${styles.btnLight}`}>Caixinhas — me manda sua pergunta</a>
-      </section>
+        <section className={styles.linksSection}>
+          <div className={`${styles.sectionEyebrow} ${styles.eyebrowLight}`}>links principais</div>
+          <a href="#" className={`${styles.linkBtn} ${styles.btnLight}`}>Conteúdos de Psicologia</a>
+          <a href="#" className={`${styles.linkBtn} ${styles.btnOutlineDark}`}>Sobre a Análise do Comportamento</a>
+          <a href="#" className={`${styles.linkBtn} ${styles.btnLight}`}>Caixinhas — me manda sua pergunta</a>
+        </section>
+      </div>
 
       {/* ── Lista de Espera ── */}
       <div className={styles.waitlistBand}>
@@ -44,7 +45,7 @@ export default function BioPage() {
         </div>
         <div className={styles.waitlistBody}>
           <div className={styles.waitlistIconWrap}>
-            <svg viewBox="0 0 24 24" width="28" height="28" stroke="white" fill="none" strokeWidth="1.6">
+            <svg viewBox="0 0 24 24" width="52" height="52" stroke="white" fill="none" strokeWidth="1.2">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="M2 7l10 7 10-7" />
             </svg>

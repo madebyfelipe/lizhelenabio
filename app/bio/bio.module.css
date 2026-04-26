@@ -8,25 +8,22 @@
 }
 
 /* ─────────────────────────────────────────────
-   1. HEADER — crimson
+   1. CRIMSON BLOCK — grid única para header + links
 ───────────────────────────────────────────── */
-.header {
+.crimsonBlock {
   background: #d81c5b;
-  padding: 40px 24px 28px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
   background-image:
     linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
   background-size: 22px 22px;
-  pointer-events: none;
+  position: relative;
+}
+
+.header {
+  padding: 40px 24px 12px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
 }
 
 .headerInner {
@@ -96,15 +93,10 @@
 }
 
 /* ─────────────────────────────────────────────
-   2. LINKS SECTION — crimson
+   2. LINKS SECTION — herda fundo do crimsonBlock
 ───────────────────────────────────────────── */
 .linksSection {
-  background: #d81c5b;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 20px 20px;
-  padding: 16px 22px 22px;
+  padding: 8px 22px 22px;
 }
 
 .sectionEyebrow {
@@ -155,7 +147,6 @@
   transform: scale(0.97);
 }
 
-/* On dark background: offwhite fill + dark text */
 .btnLight {
   background: #f5f0eb;
   color: #332c2f;
@@ -168,7 +159,6 @@
   transform: translateY(-1px);
 }
 
-/* On dark background: white outline */
 .btnOutlineDark {
   background: transparent;
   color: #f5f0eb;
@@ -226,24 +216,22 @@
 .waitlistBody {
   padding: 24px 22px 28px;
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: #332c2f;
 }
 
 .waitlistIconWrap {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  background: #d81c5b;
-  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 14px;
+  opacity: 0.9;
 }
 
 .waitlistContent {
-  flex: 1;
+  width: 100%;
 }
 
 .waitlistTitle {
@@ -317,10 +305,6 @@
 ───────────────────────────────────────────── */
 .sociaisSection {
   background: #332c2f;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
   padding: 22px 22px 28px;
 }
 
