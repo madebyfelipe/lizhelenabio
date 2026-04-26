@@ -206,6 +206,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── LISTA DE ESPERA ── */}
+      <section className={styles.waitlist}>
+        <div className={styles.waitlistInner}>
+          <h2 className={styles.waitlistTitle}>
+            Entre na lista de espera.
+          </h2>
+          <p className={styles.waitlistDesc}>
+            Seja a primeira a saber quando tiver novidade — conteúdo exclusivo, mentorias e muito mais.
+          </p>
+          <a
+            href="https://typebot.co/my-typebot-pyy8ao8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaDark}
+          >
+            Quero entrar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </section>
+
       {/* ── AVISO ÉTICO ── */}
       <section className={styles.aviso}>
         <div className={styles.avisoInner}>
@@ -276,11 +299,11 @@ export default function Home() {
           <p className={styles.footerText}>© 2026 Liz Helena · Psicologia</p>
           <a href="https://madebyfelipe.com.br" target="_blank" rel="noopener noreferrer">
             <Image
-              src="/logo-black.png"
+              src="/logo.png"
               alt="Made by Felipe"
               height={20}
               width={78}
-              style={{ objectFit: 'contain', opacity: 0.15 }}
+              style={{ objectFit: 'contain', opacity: 0.25 }}
             />
           </a>
         </div>

@@ -529,6 +529,60 @@
   line-height: 1.8;
 }
 
+/* ── LISTA DE ESPERA ─────────────────────────────── */
+.waitlist {
+  background: #f5f0eb;
+  padding: clamp(70px, 12vw, 140px) 0;
+  text-align: center;
+}
+
+.waitlistInner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px);
+}
+
+.waitlistTitle {
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(28px, 5vw, 56px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  color: #332c2f;
+  margin-bottom: 20px;
+}
+
+.waitlistDesc {
+  font-family: var(--font-nhd);
+  font-weight: 300;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.75;
+  color: rgba(51, 44, 47, 0.6);
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+.ctaDark {
+  font-family: var(--font-nhd);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f5f0eb;
+  text-decoration: none;
+  background: #332c2f;
+  padding: 15px 36px;
+  transition: background 0.15s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ctaDark:hover {
+  background: #1a1215;
+  transform: translateY(-2px);
+}
+
 /* ── AVISO ÉTICO ──────────────────────────────────── */
 .aviso {
   background: #332c2f;
