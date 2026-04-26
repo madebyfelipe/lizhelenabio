@@ -2,12 +2,7 @@
 .site {
   width: 100%;
   overflow-x: hidden;
-}
-
-.inner {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 clamp(20px, 5vw, 60px);
+  font-family: var(--font-nhd);
 }
 
 /* ── NAV ──────────────────────────────────────────── */
@@ -46,12 +41,12 @@
 }
 
 .navLink {
-  font-family: var(--font-subtitle);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-family: var(--font-nhd);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -59,10 +54,10 @@
 .navLink:hover { color: #fff; }
 
 .navCta {
-  font-family: var(--font-subtitle);
-  font-size: 10px;
+  font-family: var(--font-nhd);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #332c2f;
   text-decoration: none;
@@ -80,9 +75,8 @@
   .navMobileLinks {
     display: flex;
     align-items: center;
-    gap: 12px;
   }
-  .navCta { padding: 8px 14px; font-size: 9px; }
+  .navCta { padding: 8px 14px; font-size: 10px; }
 }
 
 /* ── HERO ─────────────────────────────────────────── */
@@ -108,33 +102,33 @@
 }
 
 .heroEyebrow {
-  font-family: var(--font-subtitle);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.24em;
+  font-family: var(--font-nhd);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   margin-bottom: clamp(20px, 4vw, 36px);
 }
 
 .heroHeadline {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: italic;
-  font-size: clamp(38px, 7vw, 88px);
-  line-height: 0.95;
-  letter-spacing: -0.02em;
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(36px, 6.5vw, 82px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
   color: #ffffff;
   max-width: 900px;
   margin-bottom: clamp(28px, 5vw, 48px);
 }
 
 .heroSub {
-  font-family: var(--font-body);
-  font-size: clamp(14px, 2vw, 17px);
+  font-family: var(--font-nhd);
+  font-weight: 300;
+  font-size: clamp(15px, 2vw, 18px);
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.75);
-  max-width: 560px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 540px;
   margin-bottom: clamp(36px, 6vw, 56px);
 }
 
@@ -146,7 +140,7 @@
 }
 
 .ctaPrimary {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -166,14 +160,14 @@
 }
 
 .ctaSecondary {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 2px;
   transition: color 0.15s, border-color 0.15s;
   display: inline-flex;
@@ -198,13 +192,13 @@
   50%       { transform: scale(0.82) rotate(22deg); opacity: 0.7; }
 }
 
-/* ── MARQUEE BAND ─────────────────────────────────── */
+/* ── MARQUEE 1 ────────────────────────────────────── */
 .marqueeBand {
   background: #332c2f;
   overflow: hidden;
   border-top: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 .marqueeTrack {
@@ -214,11 +208,13 @@
 }
 
 .marqueeItem {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(14px, 2.5vw, 19px);
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(13px, 2vw, 17px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: #ffffff;
-  padding: 0 24px;
+  padding: 0 28px;
   flex-shrink: 0;
 }
 
@@ -253,40 +249,40 @@
 }
 
 .eyebrow {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: #ffb5c7;
   margin-bottom: 20px;
 }
 
 .sectionTitle {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: italic;
-  font-size: clamp(26px, 4vw, 44px);
-  line-height: 1.0;
-  letter-spacing: -0.01em;
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #ffffff;
 }
 
 .bodyText {
-  font-family: var(--font-body);
+  font-family: var(--font-nhd);
+  font-weight: 300;
   font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 18px;
 }
 
 .bodyText:last-child { margin-bottom: 0; }
 
-/* ── MARQUEE BAND 2 ───────────────────────────────── */
+/* ── MARQUEE 2 ────────────────────────────────────── */
 .marqueeBand2 {
   background: #d81c5b;
   overflow: hidden;
-  padding: 10px 0;
+  padding: 12px 0;
 }
 
 .marqueeTrack2 {
@@ -296,18 +292,18 @@
 }
 
 .marqueeItem2 {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-  padding: 0 22px;
+  color: rgba(255,255,255,0.8);
+  padding: 0 24px;
   flex-shrink: 0;
 }
 
 .marqueeDot2 {
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.35);
   margin-left: 4px;
 }
 
@@ -333,22 +329,21 @@
 }
 
 .eyebrowDark {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: #d81c5b;
   margin-bottom: 16px;
 }
 
 .sectionTitleDark {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: italic;
-  font-size: clamp(26px, 4vw, 44px);
-  line-height: 1.0;
-  letter-spacing: -0.01em;
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(24px, 3.5vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: #332c2f;
   max-width: 600px;
 }
@@ -373,27 +368,28 @@
 .areaCard:hover { background: #edeae5; }
 
 .areaNumber {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   color: #d81c5b;
 }
 
 .areaTitle {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: italic;
-  font-size: clamp(16px, 2.2vw, 20px);
-  line-height: 1.1;
+  font-family: var(--font-nhd);
+  font-weight: 700;
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   color: #332c2f;
 }
 
 .areaDesc {
-  font-family: var(--font-body);
-  font-size: clamp(13px, 1.6vw, 15px);
-  line-height: 1.6;
-  color: rgba(51, 44, 47, 0.6);
+  font-family: var(--font-nhd);
+  font-weight: 300;
+  font-size: clamp(13px, 1.5vw, 14px);
+  line-height: 1.65;
+  color: rgba(51, 44, 47, 0.55);
 }
 
 /* ── CONTEÚDO E PRODUÇÃO ──────────────────────────── */
@@ -414,18 +410,17 @@
 }
 
 .conteudoText {
-  font-family: var(--font-body);
-  font-size: clamp(14px, 2vw, 17px);
+  font-family: var(--font-nhd);
+  font-weight: 300;
+  font-size: clamp(15px, 2vw, 17px);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
-  margin: 24px 0 40px;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 24px auto 40px;
+  max-width: 500px;
 }
 
 .ctaLight {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -465,26 +460,27 @@
 }
 
 .bodyTextDark {
-  font-family: var(--font-body);
+  font-family: var(--font-nhd);
+  font-weight: 300;
   font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.75;
-  color: rgba(51, 44, 47, 0.7);
+  line-height: 1.8;
+  color: rgba(51, 44, 47, 0.65);
   margin-bottom: 28px;
 }
 
 .trajetoriaPlaceholder {
-  border: 1px dashed rgba(51, 44, 47, 0.22);
+  border: 1px dashed rgba(51, 44, 47, 0.2);
   padding: 24px;
 }
 
 .placeholderText {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-nhd);
   font-size: 10px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(51, 44, 47, 0.35);
-  line-height: 1.6;
+  color: rgba(51, 44, 47, 0.3);
+  line-height: 1.8;
 }
 
 /* ── AVISO ÉTICO ──────────────────────────────────── */
@@ -494,7 +490,7 @@
 }
 
 .avisoInner {
-  max-width: 720px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 60px);
   text-align: center;
@@ -507,20 +503,21 @@
 }
 
 .avisoTitle {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: italic;
-  font-size: clamp(22px, 3.5vw, 36px);
-  line-height: 1.05;
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(20px, 3vw, 32px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
 .avisoText {
-  font-family: var(--font-body);
-  font-size: clamp(13px, 1.7vw, 15px);
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.55);
+  font-family: var(--font-nhd);
+  font-weight: 300;
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 /* ── CONTATO ──────────────────────────────────────── */
@@ -545,10 +542,11 @@
 }
 
 .contatoText {
-  font-family: var(--font-body);
+  font-family: var(--font-nhd);
+  font-weight: 300;
   font-size: clamp(14px, 1.8vw, 16px);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.55);
   margin-top: 20px;
 }
 
@@ -563,14 +561,14 @@
   align-items: center;
   justify-content: space-between;
   padding: clamp(18px, 3vw, 24px) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   color: #ffffff;
-  transition: color 0.15s, padding-left 0.15s;
+  transition: color 0.15s, padding-left 0.18s;
 }
 
 .contatoLink:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contatoLink:hover {
@@ -579,10 +577,10 @@
 }
 
 .contatoLinkLabel {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-style: italic;
-  font-size: clamp(20px, 3vw, 30px);
+  font-family: var(--font-nhd);
+  font-weight: 900;
+  font-size: clamp(22px, 3.2vw, 34px);
+  letter-spacing: -0.02em;
 }
 
 /* ── FOOTER ───────────────────────────────────────── */
@@ -603,10 +601,10 @@
 }
 
 .footerText {
-  font-family: var(--font-subtitle);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-family: var(--font-nhd);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(51, 44, 47, 0.4);
+  color: rgba(51, 44, 47, 0.35);
 }
