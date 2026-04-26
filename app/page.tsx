@@ -9,7 +9,7 @@ export default function Home() {
       <nav className={styles.nav}>
         <div className={styles.navInner}>
           <a href="/" className={styles.navLogo}>
-            <Image src="/logo-white.png" alt="Liz Helena" height={24} width={90} style={{ objectFit: 'contain' }} />
+            <Image src="/logo.png" alt="Liz Helena" height={24} width={90} style={{ objectFit: 'contain' }} />
           </a>
           <div className={styles.navLinks}>
             <a href="#sobre" className={styles.navLink}>Sobre</a>
@@ -148,7 +148,7 @@ export default function Home() {
             <h2 className={styles.sectionTitleDark}>
               Os temas que orientam minha formação.
             </h2>
-            <span className={styles.areasCount} aria-hidden="true">05</span>
+            <span className={styles.areasCount} aria-hidden="true">02</span>
           </div>
           <div className={styles.areasGrid}>
             {[
@@ -176,9 +176,12 @@ export default function Home() {
       <section className={styles.conteudo} id="conteudo">
         <div className={styles.conteudoInner}>
           <p className={styles.eyebrow}>Conteúdo e Produção</p>
-          <h2 className={styles.sectionTitle}>
-            Onde acompanhar meu trabalho.
-          </h2>
+          <div className={styles.conteudoTop}>
+            <h2 className={styles.sectionTitle}>
+              Onde acompanhar meu trabalho.
+            </h2>
+            <span className={styles.conteudoDecorNum} aria-hidden="true">03</span>
+          </div>
           <p className={styles.conteudoText}>
             Compartilho estudos, leituras e reflexões sobre psicologia comportamental nas redes
             sociais. O foco é levar conteúdo claro, embasado e útil para quem quer entender
@@ -201,7 +204,7 @@ export default function Home() {
             <h2 className={styles.sectionTitleDark}>
               Formação em construção, com método.
             </h2>
-            <div className={styles.sobreDecor} style={{ color: 'rgba(51,44,47,0.06)' }} aria-hidden="true">02</div>
+            <div className={styles.sobreDecor} style={{ color: 'rgba(51,44,47,0.06)' }} aria-hidden="true">04</div>
           </div>
           <div>
             <p className={styles.bodyTextDark}>
