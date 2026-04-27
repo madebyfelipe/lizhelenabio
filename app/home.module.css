@@ -233,29 +233,56 @@
   50%       { transform: translateX(-50%) translateY(6px); opacity: 0.75; }
 }
 
-.heroDecoStar {
-  align-self: center;
-  width: clamp(280px, 58svh, 600px);
-  height: clamp(280px, 58svh, 600px);
+.heroPhoto {
+  align-self: end;
   position: relative;
+  height: clamp(360px, 70svh, 720px);
+  width: 100%;
+  overflow: hidden;
   flex-shrink: 0;
-  animation: starPulse 5s ease-in-out infinite;
-  pointer-events: none;
 }
 
 @media (max-width: 860px) {
-  .heroDecoStar {
-    width: clamp(180px, 50vw, 320px);
-    height: clamp(180px, 50vw, 320px);
-    justify-self: end;
+  .heroPhoto {
+    height: clamp(240px, 48vw, 400px);
+    justify-self: stretch;
     align-self: end;
-    margin-bottom: -20px;
   }
 }
 
-@keyframes starPulse {
-  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
-  50%       { transform: scale(0.9) rotate(15deg); opacity: 0.85; }
+/* ── SOBRE photo ─────────────────────────────────── */
+.sobrePhotoWrap {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 30vw, 420px);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+/* ── FOTO STRIP (entre áreas e conteúdo) ─────────── */
+.fotoStrip {
+  position: relative;
+  width: 100%;
+  height: clamp(280px, 40vw, 540px);
+  overflow: hidden;
+}
+
+/* ── CONTEÚDO photo ──────────────────────────────── */
+.conteudoPhotoWrap {
+  position: relative;
+  width: 100%;
+  height: clamp(280px, 42vw, 560px);
+  overflow: hidden;
+  margin-top: 56px;
+}
+
+/* ── TRAJETÓRIA photo ────────────────────────────── */
+.trajetoriaPhotoWrap {
+  position: relative;
+  width: 100%;
+  height: clamp(200px, 28vw, 380px);
+  overflow: hidden;
+  margin-top: 28px;
 }
 
 /* ── MARQUEE 1 ────────────────────────────────────── */

@@ -58,8 +58,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.heroDecoStar} aria-hidden="true">
-            <Image src="/estrela-1.png" alt="" fill style={{ objectFit: 'contain' }} />
+          <div className={styles.heroPhoto}>
+            <Image src="/20260426_213415.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
           </div>
         </div>
 
@@ -102,6 +102,9 @@ export default function Home() {
             <div className={styles.sobreDecor} aria-hidden="true">01</div>
           </div>
           <div>
+            <div className={styles.sobrePhotoWrap}>
+              <Image src="/20260426_214334.jpg" alt="Liz Helena estudando" fill style={{ objectFit: 'cover', objectPosition: 'center 38%' }} />
+            </div>
             <p className={styles.bodyText}>
               Liz Helena é estudante de Psicologia e dedica sua formação ao estudo da Terapia de
               Aceitação e Compromisso (ACT) e Terapia Comportamental Dialética (DBT) com origem na
@@ -167,6 +170,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FOTO STRIP ── */}
+      <div className={styles.fotoStrip}>
+        <Image src="/20260426_215111.jpg" alt="Liz Helena com livro de ACT" fill style={{ objectFit: 'cover', objectPosition: 'center 35%' }} />
+      </div>
+
       {/* ── CONTEÚDO E PRODUÇÃO ── */}
       <section className={styles.conteudo} id="conteudo">
         <div className={styles.conteudoInner}>
@@ -189,6 +197,9 @@ export default function Home() {
             Seguir no Instagram
           </a>
         </div>
+        <div className={styles.conteudoPhotoWrap}>
+          <Image src="/20260426_213014.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 22%' }} />
+        </div>
       </section>
 
       {/* ── TRAJETÓRIA ACADÊMICA ── */}
@@ -200,6 +211,9 @@ export default function Home() {
               Formação em construção, com método e sensibilidade.
             </h2>
             <div className={styles.sobreDecor} style={{ color: 'rgba(0,0,0,0.06)' }} aria-hidden="true">04</div>
+            <div className={styles.trajetoriaPhotoWrap}>
+              <Image src="/20260426_215241.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
+            </div>
           </div>
           <div>
             <p className={styles.bodyTextDark}>
