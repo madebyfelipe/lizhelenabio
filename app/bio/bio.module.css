@@ -11,7 +11,7 @@
    1. CRIMSON BLOCK — grid única para header + links
 ───────────────────────────────────────────── */
 .crimsonBlock {
-  background: #d81c5b;
+  background: #ffb5c7;
   background-image:
     linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
@@ -61,7 +61,7 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #ffb5c7;
+  color: #d81c5b;
   margin-bottom: 8px;
 }
 
@@ -75,7 +75,7 @@
   font-weight: 800;
   font-style: italic;
   font-size: 3.8rem;
-  color: #ffffff;
+  color: #000000;
   line-height: 1;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -88,7 +88,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.5);
   margin-top: 12px;
 }
 
@@ -110,12 +110,12 @@
 }
 
 .eyebrowLight {
-  color: #ffb5c7;
-  opacity: 0.7;
+  color: #d81c5b;
+  opacity: 0.8;
 }
 
 .eyebrowDark {
-  color: #332c2f;
+  color: #000000;
   opacity: 0.4;
 }
 
@@ -149,7 +149,7 @@
 
 .btnLight {
   background: #f5f0eb;
-  color: #332c2f;
+  color: #000000;
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
@@ -175,7 +175,7 @@
    3. WAITLIST BAND — dark
 ───────────────────────────────────────────── */
 .waitlistBand {
-  background: #332c2f;
+  background: #000000;
 }
 
 .marqueeWrap {
@@ -183,7 +183,7 @@
   border-top: 1px solid rgba(255,255,255,0.08);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 8px 0;
-  background: #332c2f;
+  background: #000000;
 }
 
 .marqueeTrack {
@@ -219,7 +219,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: #332c2f;
+  background: #000000;
 }
 
 .waitlistIconWrap {
@@ -266,7 +266,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #332c2f;
+  color: #000000;
   cursor: pointer;
   transition: background 0.15s, transform 0.15s;
   width: 100%;
@@ -304,7 +304,7 @@
    4. SOCIAIS — dark
 ───────────────────────────────────────────── */
 .sociaisSection {
-  background: #332c2f;
+  background: #000000;
   padding: 22px 22px 28px;
 }
 

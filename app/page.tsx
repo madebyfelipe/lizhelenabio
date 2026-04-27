@@ -33,17 +33,17 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <div className={styles.heroInner}>
-            <p className={styles.heroEyebrow}>Psicologia · TCC · Divulgação Científica</p>
+            <p className={styles.heroEyebrow}>Psicologia</p>
             <h1 className={styles.heroHeadline}>
               Psicologia baseada<br />
-              em evidências para<br />
-              quem quer entender<br />
-              o próprio comportamento.
+              em evidências com<br />
+              responsabilidade<br />
+              e sensibilidade.
             </h1>
             <p className={styles.heroSub}>
-              Liz Helena estuda Psicologia com foco em Terapia Cognitivo-Comportamental e produz
-              conteúdo sobre saúde mental, autoconhecimento e comportamento para mulheres,
-              adolescentes e jovens adultos.
+              Liz Helena estuda Psicologia com foco nas Terapias Contextuais Comportamentais ACT e
+              DBT, também produz conteúdo sobre saúde mental, autoconhecimento e comportamento para
+              mulheres, jovens adultos e adolescentes.
             </p>
             <div className={styles.heroCtas}>
               <a href="https://www.instagram.com/lizhelena.psi/" target="_blank" rel="noopener noreferrer" className={styles.ctaPrimary}>
@@ -97,22 +97,17 @@ export default function Home() {
           <div>
             <p className={styles.eyebrow}>Sobre</p>
             <h2 className={styles.sectionTitle}>
-              Estudo, pesquisa e divulgação científica em psicologia.
+              Estudos e foco de atuação na psicoterapia.
             </h2>
             <div className={styles.sobreDecor} aria-hidden="true">01</div>
           </div>
           <div>
             <p className={styles.bodyText}>
-              Liz Helena é estudante de Psicologia e dedica sua formação ao estudo da Terapia
-              Cognitivo-Comportamental, abordagem reconhecida internacionalmente pela base
-              científica e pela eficácia comprovada no tratamento de questões como ansiedade,
-              autoestima e regulação emocional.
-            </p>
-            <p className={styles.bodyText}>
-              Seu trabalho atual reúne produção de conteúdo, pesquisa acadêmica e estudo contínuo
-              das principais referências da área. O objetivo é traduzir psicologia séria para um
-              público que busca entender o próprio funcionamento sem cair em simplificações ou
-              autoajuda rasa.
+              Liz Helena é estudante de Psicologia e dedica sua formação ao estudo da Terapia de
+              Aceitação e Compromisso (ACT) e Terapia Comportamental Dialética (DBT) com origem na
+              Análise do Comportamento, abordagem reconhecida internacionalmente pela base científica
+              e pela eficácia comprovada no tratamento de questões como ansiedade, rigidez cognitiva
+              e regulação emocional.
             </p>
           </div>
         </div>
@@ -123,7 +118,7 @@ export default function Home() {
         <div className={styles.marqueeTrack2}>
           {Array.from({ length: 14 }).map((_, i) => (
             <span key={i} className={styles.marqueeItem2}>
-              TCC
+              ACT
               <svg className={styles.marqueeStar2} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
               </svg>
@@ -131,7 +126,7 @@ export default function Home() {
               <svg className={styles.marqueeStar2} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
               </svg>
-              Comportamento
+              DBT
               <svg className={styles.marqueeStar2} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 2L13.5 10.5L22 12L13.5 13.5L12 22L10.5 13.5L2 12L10.5 10.5Z" />
               </svg>
@@ -152,11 +147,11 @@ export default function Home() {
           </div>
           <div className={styles.areasGrid}>
             {[
-              { title: 'Terapia Cognitivo-Comportamental (TCC)', desc: 'Fundamentos teóricos, técnicas e aplicações clínicas.' },
-              { title: 'Psicologia da adolescência e juventude', desc: 'Desenvolvimento emocional, identidade e relações.' },
-              { title: 'Saúde mental da mulher', desc: 'Autoestima, ansiedade, sobrecarga e padrões de pensamento.' },
-              { title: 'Comportamento e cognição', desc: 'Como pensamentos moldam emoções e ações no dia a dia.' },
-              { title: 'Divulgação científica em psicologia', desc: 'Tradução de conteúdo acadêmico para linguagem acessível.' },
+              { title: 'Terapias Contextuais Comportamentais', desc: 'Entende a importância de contextos históricos e situacionais para a compreensão do comportamento humano, buscando entender a função e significados dos comportamentos.' },
+              { title: 'Terapia de Aceitação e Compromisso (ACT)', desc: 'Promove a flexibilidade psicológica, desenvolvendo a capacidade de lidar de forma aberta com experiências e emoções desafiadoras em vez de evitá-las, para uma vida mais valorizada.' },
+              { title: 'Terapia Comportamental Dialética (DBT)', desc: 'Treinamento de habilidades em Mindfulness, Regulação Emocional, Tolerância ao Mal Estar e Efetividade Interpessoal buscando o equilíbrio comportamental.' },
+              { title: 'Jovens adultos e adolescência', desc: 'Autoestima, autenticidade e cultura.' },
+              { title: 'Cognição e contexto', desc: 'Estudos sobre como os comportamentos são processados pelo cérebro, sem excluir da análise fatores sociais, econômicos, históricos e culturais.' },
             ].map((area, i) => (
               <div key={i} className={`${styles.areaCard} ${i === 4 ? styles.areaCardAccent : ''}`}>
                 <span className={styles.areaArrow} aria-hidden="true">
@@ -202,23 +197,19 @@ export default function Home() {
           <div>
             <p className={styles.eyebrowDark}>Trajetória Acadêmica</p>
             <h2 className={styles.sectionTitleDark}>
-              Formação em construção, com método.
+              Formação em construção, com método e sensibilidade.
             </h2>
-            <div className={styles.sobreDecor} style={{ color: 'rgba(51,44,47,0.06)' }} aria-hidden="true">04</div>
+            <div className={styles.sobreDecor} style={{ color: 'rgba(0,0,0,0.06)' }} aria-hidden="true">04</div>
           </div>
           <div>
             <p className={styles.bodyTextDark}>
-              Atualmente cursando Psicologia, com participação em grupos de estudo, leitura
-              sistemática de literatura científica e foco em fundamentos da Terapia
-              Cognitivo-Comportamental. Esta página reúne minha trajetória de estudo e os
-              caminhos que pretendo desenvolver ao longo da formação.
+              Atualmente estou no 9° de 10° semestres da graduação em Psicologia, faço atendimentos
+              na Clinica-Escola e em comunidades, faço parte de grupos de estudos com o meu foco de
+              atuação e estudos individuais. Acredito que uma boa psicoterapia é baseada em muito
+              conhecimento técnico e científico sem excluir o afeto e a sensibilidade diante da
+              pessoa, caminhando lado a lado para a vida que essa pessoa quer construir.
             </p>
-            <div className={styles.trajetoriaPlaceholder}>
-              <p className={styles.placeholderText}>
-                Em breve: semestre atual · instituição · eventos acadêmicos ·
-                cursos complementares · grupos de pesquisa
-              </p>
-            </div>
+            <p className={styles.trajetoriaDestaque}>Ciência com afeto e responsabilidade.</p>
           </div>
         </div>
       </section>

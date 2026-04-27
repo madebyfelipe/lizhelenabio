@@ -31,8 +31,8 @@ const neueHaasSubtitle = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Liz Helena — Psicologia e TCC',
-  description: 'Estudante de Psicologia com foco em Terapia Cognitivo-Comportamental. Conteúdo sobre saúde mental, comportamento e autoconhecimento para mulheres, adolescentes e jovens adultos.',
+  title: 'Liz Helena — Psicologia',
+  description: 'Estudante de Psicologia com foco nas Terapias Contextuais Comportamentais ACT e DBT. Conteúdo sobre saúde mental, autoconhecimento e comportamento para mulheres, jovens adultos e adolescentes.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

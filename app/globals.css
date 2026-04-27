@@ -4,9 +4,9 @@ html { scroll-behavior: smooth; }
 
 /* ── CSS Variables ───────────────────────────────── */
 :root {
-  --crimson:      #d81c5b;
-  --crimson-dark: #b01549;
-  --dark:         #332c2f;
+  --crimson:      #ffb5c7;
+  --crimson-dark: #f0a0b8;
+  --dark:         #000000;
   --blush:        #ffb5c7;
   --white:        #ffffff;
 
@@ -14,7 +14,7 @@ html { scroll-behavior: smooth; }
   --font-subtitle: 'Neue Haas Display', Helvetica, Arial, sans-serif;
   --font-body:     'Times New Roman', Times, serif;
 
-  --bg-gradient: linear-gradient(160deg, #1a1215 0%, #2a1020 45%, #d81c5b 100%);
+  --bg-gradient: linear-gradient(160deg, #1a1215 0%, #2a1020 45%, #ffb5c7 100%);
   --card-max: 440px;
   --page-pad: clamp(16px, 4vw, 40px);
 }
