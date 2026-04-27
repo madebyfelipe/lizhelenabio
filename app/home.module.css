@@ -268,7 +268,7 @@
 /* ── CONTEÚDO layout 3 colunas ───────────────────── */
 .conteudoLayout {
   display: grid;
-  grid-template-columns: 1fr clamp(300px, 42%, 560px) 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 34vw, 520px);
   align-items: stretch;
 }
 
@@ -282,6 +282,12 @@
   .conteudoLayout {
     grid-template-columns: 1fr;
   }
+
+  .conteudoInner {
+    margin: 0 auto;
+    padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 40px);
+  }
+
   .conteudoSidePhoto {
     display: none;
   }
@@ -591,16 +597,16 @@
     linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
   background-size: 28px 28px;
-  text-align: center;
+  text-align: left;
 }
 
 .conteudoInner {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 40px);
+  max-width: 720px;
+  margin: 0 0 0 auto;
+  padding: clamp(60px, 10vw, 120px) clamp(28px, 5vw, 72px) clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 100%;
 }
@@ -608,6 +614,7 @@
 .conteudoTop {
   position: relative;
   display: inline-block;
+  align-self: flex-start;
 }
 
 .conteudoDecorNum {
@@ -631,8 +638,8 @@
   font-size: clamp(15px, 2vw, 17px);
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.65);
-  margin: 24px auto 40px;
-  max-width: 500px;
+  margin: 24px 0 40px;
+  max-width: 540px;
 }
 
 .ctaLight {

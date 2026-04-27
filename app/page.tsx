@@ -171,10 +171,6 @@ export default function Home() {
       <section className={styles.conteudo} id="conteudo">
         <div className={styles.conteudoLayout}>
 
-          <div className={styles.conteudoSidePhoto}>
-            <Image src="/20260426_215241.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 25%' }} />
-          </div>
-
           <div className={styles.conteudoInner}>
             <p className={styles.eyebrow}>Conteúdo e Produção</p>
             <div className={styles.conteudoTop}>
