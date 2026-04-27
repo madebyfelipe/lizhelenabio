@@ -98,7 +98,7 @@
   padding: 0 clamp(20px, 5vw, 60px);
   min-height: calc(100svh - 64px);
   display: grid;
-  grid-template-columns: 1fr clamp(280px, 58svh, 600px);
+  grid-template-columns: 1fr clamp(200px, 32svh, 380px);
   gap: clamp(24px, 4vw, 48px);
   align-items: end;
 }
@@ -236,16 +236,16 @@
 .heroPhoto {
   align-self: end;
   position: relative;
-  height: clamp(360px, 70svh, 720px);
   width: 100%;
+  aspect-ratio: 3/4;
   overflow: hidden;
   flex-shrink: 0;
 }
 
 @media (max-width: 860px) {
   .heroPhoto {
-    height: clamp(240px, 48vw, 400px);
-    justify-self: stretch;
+    width: clamp(160px, 44vw, 300px);
+    justify-self: end;
     align-self: end;
   }
 }
@@ -254,33 +254,42 @@
 .sobrePhotoWrap {
   position: relative;
   width: 100%;
-  height: clamp(220px, 30vw, 420px);
+  max-width: 400px;
+  aspect-ratio: 3/4;
   overflow: hidden;
   margin-bottom: 24px;
 }
 
 /* ── FOTO STRIP (entre áreas e conteúdo) ─────────── */
+.fotoStripSection {
+  background: #1a1215;
+  padding: clamp(48px, 7vw, 96px) clamp(20px, 5vw, 60px);
+  display: flex;
+  justify-content: center;
+}
+
 .fotoStrip {
   position: relative;
-  width: 100%;
-  height: clamp(280px, 40vw, 540px);
+  width: clamp(200px, 26vw, 360px);
+  aspect-ratio: 3/4;
   overflow: hidden;
 }
 
 /* ── CONTEÚDO photo ──────────────────────────────── */
 .conteudoPhotoWrap {
   position: relative;
-  width: 100%;
-  height: clamp(280px, 42vw, 560px);
+  width: clamp(200px, 28vw, 360px);
+  aspect-ratio: 3/4;
   overflow: hidden;
-  margin-top: 56px;
+  margin: 48px auto 0;
 }
 
 /* ── TRAJETÓRIA photo ────────────────────────────── */
 .trajetoriaPhotoWrap {
   position: relative;
   width: 100%;
-  height: clamp(200px, 28vw, 380px);
+  max-width: 360px;
+  aspect-ratio: 3/4;
   overflow: hidden;
   margin-top: 28px;
 }

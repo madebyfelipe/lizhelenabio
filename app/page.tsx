@@ -171,8 +171,10 @@ export default function Home() {
       </section>
 
       {/* ── FOTO STRIP ── */}
-      <div className={styles.fotoStrip}>
-        <Image src="/20260426_215111.jpg" alt="Liz Helena com livro de ACT" fill style={{ objectFit: 'cover', objectPosition: 'center 35%' }} />
+      <div className={styles.fotoStripSection}>
+        <div className={styles.fotoStrip}>
+          <Image src="/20260426_215111.jpg" alt="Liz Helena com livro de ACT" fill style={{ objectFit: 'cover', objectPosition: 'center 35%' }} />
+        </div>
       </div>
 
       {/* ── CONTEÚDO E PRODUÇÃO ── */}
