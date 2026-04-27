@@ -657,17 +657,18 @@
 
 .trajetoriaLayout {
   display: grid;
-  grid-template-columns: clamp(200px, 28vw, 380px) 1fr;
-  min-height: clamp(460px, 65vw, 720px);
+  grid-template-columns: clamp(240px, 33vw, 460px) 1fr;
+  align-items: stretch;
 }
 
 .trajetoriaSidePhoto {
   position: relative;
   overflow: hidden;
+  min-height: clamp(360px, 50vw, 560px);
 }
 
 .trajetoriaContent {
-  padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
+  padding: clamp(48px, 6vw, 80px) clamp(20px, 5vw, 60px);
   display: flex;
   align-items: center;
 }
@@ -685,7 +686,7 @@
     grid-template-columns: 1fr;
   }
   .trajetoriaSidePhoto {
-    height: clamp(300px, 60vw, 500px);
+    min-height: clamp(300px, 60vw, 500px);
   }
   .trajetoriaInner { grid-template-columns: 1fr; gap: 32px; }
 }
