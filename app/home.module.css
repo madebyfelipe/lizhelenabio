@@ -268,24 +268,30 @@
 /* ── CONTEÚDO layout 3 colunas ───────────────────── */
 .conteudoLayout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 34vw, 520px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr);
   align-items: stretch;
+  min-height: clamp(520px, 60vw, 760px);
 }
 
 .conteudoSidePhoto {
   position: relative;
   overflow: hidden;
-  min-height: clamp(480px, 65vw, 760px);
+  min-height: 100%;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 @media (max-width: 960px) {
   .conteudoLayout {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .conteudoInner {
     margin: 0 auto;
     padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 40px);
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .conteudoSidePhoto {
@@ -602,13 +608,15 @@
 
 .conteudoInner {
   max-width: 720px;
-  margin: 0 0 0 auto;
+  margin: 0;
   padding: clamp(60px, 10vw, 120px) clamp(28px, 5vw, 72px) clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .conteudoTop {
