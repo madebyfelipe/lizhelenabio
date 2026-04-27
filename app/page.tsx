@@ -102,9 +102,6 @@ export default function Home() {
             <div className={styles.sobreDecor} aria-hidden="true">01</div>
           </div>
           <div>
-            <div className={styles.sobrePhotoWrap}>
-              <Image src="/20260426_214334.jpg" alt="Liz Helena estudando" fill style={{ objectFit: 'cover', objectPosition: 'center 38%' }} />
-            </div>
             <p className={styles.bodyText}>
               Liz Helena é estudante de Psicologia e dedica sua formação ao estudo da Terapia de
               Aceitação e Compromisso (ACT) e Terapia Comportamental Dialética (DBT) com origem na
@@ -170,62 +167,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FOTO STRIP ── */}
-      <div className={styles.fotoStripSection}>
-        <div className={styles.fotoStrip}>
-          <Image src="/20260426_215111.jpg" alt="Liz Helena com livro de ACT" fill style={{ objectFit: 'cover', objectPosition: 'center 35%' }} />
-        </div>
-      </div>
-
       {/* ── CONTEÚDO E PRODUÇÃO ── */}
       <section className={styles.conteudo} id="conteudo">
-        <div className={styles.conteudoInner}>
-          <p className={styles.eyebrow}>Conteúdo e Produção</p>
-          <div className={styles.conteudoTop}>
-            <h2 className={styles.sectionTitle}>
-              Onde acompanhar meu trabalho.
-            </h2>
-            <span className={styles.conteudoDecorNum} aria-hidden="true">03</span>
+        <div className={styles.conteudoLayout}>
+
+          <div className={styles.conteudoSidePhoto}>
+            <Image src="/20260426_215241.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 25%' }} />
           </div>
-          <p className={styles.conteudoText}>
-            Compartilho estudos, leituras e reflexões sobre psicologia comportamental nas redes
-            sociais. O foco é levar conteúdo claro, embasado e útil para quem quer entender
-            melhor a própria mente.
-          </p>
-          <a href="https://www.instagram.com/lizhelena.psi/" target="_blank" rel="noopener noreferrer" className={styles.ctaLight}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            Seguir no Instagram
-          </a>
-        </div>
-        <div className={styles.conteudoPhotoWrap}>
-          <Image src="/20260426_213014.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 22%' }} />
+
+          <div className={styles.conteudoInner}>
+            <p className={styles.eyebrow}>Conteúdo e Produção</p>
+            <div className={styles.conteudoTop}>
+              <h2 className={styles.sectionTitle}>
+                Onde acompanhar meu trabalho.
+              </h2>
+              <span className={styles.conteudoDecorNum} aria-hidden="true">03</span>
+            </div>
+            <p className={styles.conteudoText}>
+              Compartilho estudos, leituras e reflexões sobre psicologia comportamental nas redes
+              sociais. O foco é levar conteúdo claro, embasado e útil para quem quer entender
+              melhor a própria mente.
+            </p>
+            <a href="https://www.instagram.com/lizhelena.psi/" target="_blank" rel="noopener noreferrer" className={styles.ctaLight}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              Seguir no Instagram
+            </a>
+          </div>
+
+          <div className={styles.conteudoSidePhoto}>
+            <Image src="/20260426_215111.jpg" alt="Liz Helena lendo" fill style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
+          </div>
+
         </div>
       </section>
 
       {/* ── TRAJETÓRIA ACADÊMICA ── */}
       <section className={styles.trajetoria} id="trajetoria">
-        <div className={styles.trajetoriaInner}>
-          <div>
-            <p className={styles.eyebrowDark}>Trajetória Acadêmica</p>
-            <h2 className={styles.sectionTitleDark}>
-              Formação em construção, com método e sensibilidade.
-            </h2>
-            <div className={styles.sobreDecor} style={{ color: 'rgba(0,0,0,0.06)' }} aria-hidden="true">04</div>
-            <div className={styles.trajetoriaPhotoWrap}>
-              <Image src="/20260426_215241.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
-            </div>
+        <div className={styles.trajetoriaLayout}>
+          <div className={styles.trajetoriaSidePhoto}>
+            <Image src="/20260426_215241.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: 'center 20%' }} />
           </div>
-          <div>
-            <p className={styles.bodyTextDark}>
-              Atualmente estou no 9° de 10° semestres da graduação em Psicologia, faço atendimentos
-              na Clinica-Escola e em comunidades, faço parte de grupos de estudos com o meu foco de
-              atuação e estudos individuais. Acredito que uma boa psicoterapia é baseada em muito
-              conhecimento técnico e científico sem excluir o afeto e a sensibilidade diante da
-              pessoa, caminhando lado a lado para a vida que essa pessoa quer construir.
-            </p>
-            <p className={styles.trajetoriaDestaque}>Ciência com afeto e responsabilidade.</p>
+          <div className={styles.trajetoriaContent}>
+            <div className={styles.trajetoriaInner}>
+              <div>
+                <p className={styles.eyebrowDark}>Trajetória Acadêmica</p>
+                <h2 className={styles.sectionTitleDark}>
+                  Formação em construção, com método e sensibilidade.
+                </h2>
+                <div className={styles.sobreDecor} style={{ color: 'rgba(0,0,0,0.06)' }} aria-hidden="true">04</div>
+              </div>
+              <div>
+                <p className={styles.bodyTextDark}>
+                  Atualmente estou no 9° de 10° semestres da graduação em Psicologia, faço atendimentos
+                  na Clinica-Escola e em comunidades, faço parte de grupos de estudos com o meu foco de
+                  atuação e estudos individuais. Acredito que uma boa psicoterapia é baseada em muito
+                  conhecimento técnico e científico sem excluir o afeto e a sensibilidade diante da
+                  pessoa, caminhando lado a lado para a vida que essa pessoa quer construir.
+                </p>
+                <p className={styles.trajetoriaDestaque}>Ciência com afeto e responsabilidade.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
