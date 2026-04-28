@@ -400,6 +400,8 @@
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: #ffffff;
+  position: relative;
+  z-index: 1;
 }
 
 .bodyText {
@@ -433,6 +435,7 @@
   user-select: none;
   white-space: nowrap;
   pointer-events: none;
+  z-index: 0;
 }
 
 /* ── MARQUEE 2 ────────────────────────────────────── */
@@ -537,6 +540,8 @@
   letter-spacing: -0.02em;
   color: #ffffff;
   max-width: 600px;
+  position: relative;
+  z-index: 1;
 }
 
 .areasGrid {
@@ -624,7 +629,7 @@
 .conteudoInner {
   max-width: 720px;
   margin: 0;
-  padding: clamp(60px, 10vw, 120px) clamp(12px, 2vw, 24px) clamp(60px, 10vw, 120px) clamp(20px, 5vw, 60px);
+  padding: clamp(60px, 10vw, 120px) clamp(12px, 2vw, 24px) clamp(60px, 10vw, 120px) 200px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -704,7 +709,7 @@
 }
 
 .trajetoriaContent {
-  padding: clamp(48px, 6vw, 80px) clamp(20px, 5vw, 60px) clamp(48px, 6vw, 80px) clamp(16px, 3vw, 40px);
+  padding: clamp(48px, 6vw, 80px) clamp(20px, 5vw, 60px) clamp(48px, 6vw, 80px) 200px;
   display: flex;
   align-items: center;
   min-height: 100vh;
