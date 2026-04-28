@@ -192,7 +192,9 @@ export default function Home() {
             </a>
           </div>
 
-          <div className={styles.conteudoSidePhoto} />
+          <div className={styles.conteudoSidePhoto}>
+            <Image src="/20260426_215111.jpg" alt="Liz Helena lendo" fill style={{ objectFit: 'cover', objectPosition: 'center 30%' }} />
+          </div>
 
         </div>
       </section>
@@ -200,7 +202,9 @@ export default function Home() {
       {/* ── TRAJETÓRIA ACADÊMICA ── */}
       <section className={styles.trajetoria} id="trajetoria">
         <div className={styles.trajetoriaLayout}>
-          <div className={styles.trajetoriaSidePhoto} />
+          <div className={styles.trajetoriaSidePhoto}>
+            <Image src="/20260426_215241.jpg" alt="Liz Helena" fill style={{ objectFit: 'cover', objectPosition: '70% 20%' }} />
+          </div>
           <div className={styles.trajetoriaContent}>
             <div className={styles.trajetoriaInner}>
               <div>

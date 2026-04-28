@@ -274,10 +274,8 @@
 }
 
 .conteudoSidePhoto {
-  background-image: url('/20260426_215111.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center 30%;
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   grid-column: 2;
   grid-row: 1;
@@ -685,10 +683,8 @@
 }
 
 .trajetoriaSidePhoto {
-  background-image: url('/20260426_215241.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 70% 20%;
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
 }
 
