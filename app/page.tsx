@@ -334,7 +334,7 @@ export default function Home() {
         <div className={styles.footerInner}>
           <p className={styles.footerText}>© 2026 Liz Helena · Psicologia</p>
           <a href="https://madebyfelipe.com.br" target="_blank" rel="noopener noreferrer">
-            <Image src="/logo.png" alt="Made by Felipe" height={20} width={78} style={{ objectFit: 'contain', opacity: 0.25 }} />
+            <Image src="/logo-black.png" alt="Made by Felipe" height={22} width={88} style={{ objectFit: 'contain' }} />
           </a>
         </div>
       </footer>
