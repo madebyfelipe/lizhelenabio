@@ -274,10 +274,11 @@
 }
 
 .conteudoSidePhoto {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
+  background-image: url('/20260426_215111.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center 30%;
+  min-height: 100vh;
   grid-column: 2;
   grid-row: 1;
 }
@@ -312,7 +313,7 @@
 
 /* ── MARQUEE 1 ────────────────────────────────────── */
 .marqueeBand {
-  background: #000000;
+  background: #dc143c;
   overflow: hidden;
   border-top: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -684,10 +685,11 @@
 }
 
 .trajetoriaSidePhoto {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
+  background-image: url('/20260426_215241.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 70% 20%;
+  min-height: 100vh;
 }
 
 .trajetoriaContent {
