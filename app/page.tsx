@@ -37,8 +37,8 @@ export default function Home() {
             <h1 className={styles.heroHeadline}>
               Psicologia baseada<br />
               em evidências com<br />
-              responsabilidade<br />
-              e sensibilidade.
+              responsabilidade e<br />
+              sensibilidade.
             </h1>
             <p className={styles.heroSub}>
               Liz Helena estuda Psicologia com foco nas Terapias Contextuais Comportamentais ACT e
