@@ -96,10 +96,12 @@ export default function Home() {
         <div className={styles.sobreInner}>
           <div>
             <p className={styles.eyebrow}>Sobre</p>
-            <h2 className={styles.sectionTitle}>
-              Estudos e foco de atuação na psicoterapia.
-            </h2>
-            <div className={styles.sobreDecor} aria-hidden="true">01</div>
+            <div className={styles.titleWrap}>
+              <h2 className={styles.sectionTitle}>
+                Estudos e foco de atuação na psicoterapia.
+              </h2>
+              <div className={styles.sobreDecor} aria-hidden="true">01</div>
+            </div>
           </div>
           <div>
             <p className={styles.bodyText}>
@@ -140,10 +142,12 @@ export default function Home() {
         <div className={styles.areasInner}>
           <div className={styles.areasHeader}>
             <p className={styles.eyebrowDark}>Áreas de Estudo e Interesse</p>
-            <h2 className={styles.sectionTitleDark}>
-              Os temas que orientam minha formação.
-            </h2>
-            <span className={styles.areasCount} aria-hidden="true">02</span>
+            <div className={styles.titleWrap}>
+              <h2 className={styles.sectionTitleDark}>
+                Os temas que orientam minha formação.
+              </h2>
+              <span className={styles.areasCount} aria-hidden="true">02</span>
+            </div>
           </div>
           <div className={styles.areasGrid}>
             {[
@@ -209,10 +213,12 @@ export default function Home() {
             <div className={styles.trajetoriaInner}>
               <div>
                 <p className={styles.eyebrowDark}>Trajetória Acadêmica</p>
-                <h2 className={styles.sectionTitleDark}>
-                  Formação em construção, com método e sensibilidade.
-                </h2>
-                <div className={styles.sobreDecor} style={{ color: 'rgba(0,0,0,0.06)' }} aria-hidden="true">04</div>
+                <div className={styles.titleWrap}>
+                  <h2 className={styles.sectionTitleDark}>
+                    Formação em construção, com método e sensibilidade.
+                  </h2>
+                  <div className={styles.sobreDecor} style={{ color: 'rgba(0,0,0,0.06)' }} aria-hidden="true">04</div>
+                </div>
               </div>
               <div>
                 <p className={styles.bodyTextDark}>

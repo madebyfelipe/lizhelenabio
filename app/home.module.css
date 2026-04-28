@@ -413,6 +413,12 @@
 
 .bodyText:last-child { margin-bottom: 0; }
 
+.titleWrap {
+  position: relative;
+  display: inline-block;
+  align-self: flex-start;
+}
+
 .sobreDecor {
   font-family: var(--font-nhd);
   font-weight: 900;
@@ -420,8 +426,13 @@
   line-height: 1;
   letter-spacing: -0.04em;
   color: rgba(255, 255, 255, 0.055);
-  margin-top: clamp(16px, 3vw, 28px);
+  position: absolute;
+  right: -clamp(16px, 3vw, 40px);
+  top: 50%;
+  transform: translateY(-50%);
   user-select: none;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 /* ── MARQUEE 2 ────────────────────────────────────── */
@@ -486,9 +497,13 @@
   line-height: 1;
   letter-spacing: -0.04em;
   color: rgba(255, 255, 255, 0.055);
-  margin-top: clamp(8px, 1.5vw, 16px);
+  position: absolute;
+  right: -clamp(16px, 3vw, 40px);
+  top: 50%;
+  transform: translateY(-50%);
   user-select: none;
-  display: block;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .eyebrowDark {
