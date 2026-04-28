@@ -281,30 +281,6 @@
   grid-row: 1;
 }
 
-@media (max-width: 640px) {
-  .conteudoLayout {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .conteudoInner {
-    margin: 0 auto;
-    padding: clamp(48px, 10vw, 80px) clamp(20px, 5vw, 40px);
-    grid-column: auto;
-    grid-row: auto;
-    align-items: center;
-    text-align: center;
-    min-height: auto;
-  }
-
-  .conteudoTop {
-    align-self: center;
-  }
-
-  .conteudoSidePhoto {
-    display: none;
-  }
-}
 
 /* ── TRAJETÓRIA photo ────────────────────────────── */
 .trajetoriaPhotoWrap {
@@ -361,6 +337,7 @@
 .sobre {
   background: #000000;
   padding: clamp(60px, 10vw, 120px) 0;
+  overflow: hidden;
 }
 
 .sobreInner {
@@ -488,6 +465,7 @@
 .areas {
   background: #1a1215;
   padding: clamp(60px, 10vw, 120px) 0;
+  overflow: hidden;
 }
 
 .areasInner {
@@ -697,9 +675,37 @@
   transform: translateY(-2px);
 }
 
+@media (max-width: 640px) {
+  .conteudoLayout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .conteudoSidePhoto {
+    display: none;
+  }
+
+  .conteudoInner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: clamp(48px, 10vw, 80px) clamp(20px, 5vw, 40px);
+    grid-column: auto;
+    grid-row: auto;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .conteudoTop {
+    align-self: center;
+  }
+}
+
 /* ── TRAJETÓRIA ACADÊMICA ─────────────────────────── */
 .trajetoria {
   background: #f5f0eb;
+  overflow: hidden;
 }
 
 .trajetoriaLayout {
